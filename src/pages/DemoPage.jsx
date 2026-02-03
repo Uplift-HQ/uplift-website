@@ -18,13 +18,6 @@ const DEMO_CONFIG = {
   calendlyUrl: 'https://calendly.com/dazevedo-uplifthq/30min'
 };
 
-// Demo credentials
-const DEMO_CREDENTIALS = {
-  worker: { email: 'demo-worker@uplifthq.co.uk', password: 'demo123' },
-  manager: { email: 'demo-manager@uplifthq.co.uk', password: 'demo123' },
-  admin: { email: 'demo-admin@uplifthq.co.uk', password: 'demo123' }
-};
-
 // Logo component
 const RisingULogo = ({ size = 40, color = "light" }) => {
   const textColor = color === "light" ? "#FFFFFF" : "#0F172A";
@@ -414,16 +407,6 @@ export default function DemoPage() {
                 Launch Portal <ArrowRight size={16} />
               </a>
 
-              <div style={{
-                background: 'rgba(139, 92, 246, 0.1)',
-                borderRadius: '8px',
-                padding: '12px',
-                fontSize: '13px'
-              }}>
-                <p style={{ color: '#A78BFA', margin: '0 0 4px', fontWeight: 500 }}>Demo credentials:</p>
-                <p style={{ color: 'rgba(255,255,255,0.7)', margin: 0 }}>{DEMO_CREDENTIALS.admin.email}</p>
-                <p style={{ color: 'rgba(255,255,255,0.5)', margin: 0 }}>{DEMO_CREDENTIALS.admin.password}</p>
-              </div>
             </div>
 
             {/* Phone Frames - Worker & Manager */}
