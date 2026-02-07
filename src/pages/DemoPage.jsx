@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Monitor, Check, Calendar, ArrowLeft } from 'lucide-react';
+import { ArrowRight, Monitor, Check, Calendar, ArrowLeft, Shield, Users, User } from 'lucide-react';
 
 // ============================================================
 // CONFIGURATION - Update these values
@@ -12,9 +12,13 @@ const HUBSPOT_CONFIG = {
   formGuid: 'ffc77268-2efe-4af4-84b9-03f61b8f5672'
 };
 
-// Demo URLs - update when ready
+// Demo URLs
+const PORTAL_BASE = 'https://upliftportaldemo.netlify.app';
 const DEMO_CONFIG = {
-  portalUrl: 'https://upliftportaldemo.netlify.app/',
+  portalUrl: `${PORTAL_BASE}/`,
+  portalAdminUrl: `${PORTAL_BASE}/login?demo=admin`,
+  portalManagerUrl: `${PORTAL_BASE}/login?demo=manager`,
+  portalWorkerUrl: `${PORTAL_BASE}/login?demo=worker`,
   calendlyUrl: 'https://calendly.com/dazevedo-uplifthq/30min'
 };
 
@@ -339,74 +343,230 @@ export default function DemoPage() {
                 maxWidth: '600px',
                 margin: '0 auto'
               }}>
-                63% leave because they can't see a future. This is how you show them one.
+                52% of frontline workers leave because they can't see a future. This is how you show them one.
               </p>
             </div>
 
-            {/* Head Office Portal Card */}
+            {/* Three Role Cards */}
             <div style={{
-              maxWidth: '480px',
-              margin: '0 auto 48px',
-              background: '#1E293B',
-              borderRadius: '20px',
-              padding: '28px',
-              border: '1px solid #334155',
-              textAlign: 'center'
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '24px',
+              maxWidth: '960px',
+              margin: '0 auto 48px'
             }}>
+              {/* HR Administrator Card */}
               <div style={{
-                width: '52px',
-                height: '52px',
-                background: 'rgba(139, 92, 246, 0.15)',
-                borderRadius: '14px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 16px'
+                background: '#1E293B',
+                borderRadius: '20px',
+                padding: '28px',
+                border: '1px solid #334155',
+                textAlign: 'center'
               }}>
-                <Monitor size={26} color="#8B5CF6" />
+                <div style={{
+                  width: '52px',
+                  height: '52px',
+                  background: 'rgba(255, 107, 53, 0.15)',
+                  borderRadius: '14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 16px'
+                }}>
+                  <Shield size={26} color="#FF6B35" />
+                </div>
+
+                <h3 style={{
+                  fontSize: '20px',
+                  fontWeight: 600,
+                  color: 'white',
+                  marginBottom: '4px'
+                }}>
+                  HR Administrator
+                </h3>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: '#FF6B35',
+                  marginBottom: '12px',
+                  fontWeight: 500
+                }}>
+                  Sarah Chen
+                </p>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: 'rgba(255,255,255,0.6)',
+                  marginBottom: '20px',
+                  lineHeight: 1.5
+                }}>
+                  Full platform access, analytics, payroll, and workforce management
+                </p>
+
+                <a
+                  href={DEMO_CONFIG.portalAdminUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 20px',
+                    background: '#FF6B35',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '10px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Launch as Admin <ArrowRight size={16} />
+                </a>
               </div>
 
-              <h3 style={{
-                fontSize: '20px',
-                fontWeight: 600,
-                color: 'white',
-                marginBottom: '8px'
+              {/* Manager Card */}
+              <div style={{
+                background: '#1E293B',
+                borderRadius: '20px',
+                padding: '28px',
+                border: '1px solid #334155',
+                textAlign: 'center'
               }}>
-                Head Office Portal
-              </h3>
-
-              <p style={{
-                fontSize: '14px',
-                color: 'rgba(255,255,255,0.6)',
-                marginBottom: '20px',
-                lineHeight: 1.5
-              }}>
-                AI scheduling, demand forecasting, analytics
-              </p>
-
-              <a
-                href={DEMO_CONFIG.portalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
+                <div style={{
+                  width: '52px',
+                  height: '52px',
+                  background: 'rgba(59, 130, 246, 0.15)',
+                  borderRadius: '14px',
+                  display: 'flex',
                   alignItems: 'center',
-                  gap: '8px',
-                  padding: '12px 20px',
-                  background: '#8B5CF6',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '10px',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  marginBottom: '16px'
-                }}
-              >
-                Launch Portal <ArrowRight size={16} />
-              </a>
+                  justifyContent: 'center',
+                  margin: '0 auto 16px'
+                }}>
+                  <Users size={26} color="#3B82F6" />
+                </div>
 
+                <h3 style={{
+                  fontSize: '20px',
+                  fontWeight: 600,
+                  color: 'white',
+                  marginBottom: '4px'
+                }}>
+                  Department Manager
+                </h3>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: '#3B82F6',
+                  marginBottom: '12px',
+                  fontWeight: 500
+                }}>
+                  James Williams
+                </p>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: 'rgba(255,255,255,0.6)',
+                  marginBottom: '20px',
+                  lineHeight: 1.5
+                }}>
+                  Team scheduling, approvals, performance reviews, and reporting
+                </p>
+
+                <a
+                  href={DEMO_CONFIG.portalManagerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 20px',
+                    background: '#3B82F6',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '10px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Launch as Manager <ArrowRight size={16} />
+                </a>
+              </div>
+
+              {/* Employee Card */}
+              <div style={{
+                background: '#1E293B',
+                borderRadius: '20px',
+                padding: '28px',
+                border: '1px solid #334155',
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  width: '52px',
+                  height: '52px',
+                  background: 'rgba(16, 185, 129, 0.15)',
+                  borderRadius: '14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 16px'
+                }}>
+                  <User size={26} color="#10B981" />
+                </div>
+
+                <h3 style={{
+                  fontSize: '20px',
+                  fontWeight: 600,
+                  color: 'white',
+                  marginBottom: '4px'
+                }}>
+                  Employee
+                </h3>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: '#10B981',
+                  marginBottom: '12px',
+                  fontWeight: 500
+                }}>
+                  Maria Santos
+                </p>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: 'rgba(255,255,255,0.6)',
+                  marginBottom: '20px',
+                  lineHeight: 1.5
+                }}>
+                  Momentum Score, career paths, schedule, time-off, and learning
+                </p>
+
+                <a
+                  href={DEMO_CONFIG.portalWorkerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 20px',
+                    background: '#10B981',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '10px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Launch as Employee <ArrowRight size={16} />
+                </a>
+              </div>
             </div>
 
             {/* Phone Frames - Worker & Manager */}
@@ -419,13 +579,13 @@ export default function DemoPage() {
             }}>
               <PhoneFrame
                 src="/demo/worker/index.html?demo=true"
-                label="Worker App"
-                sublabel="Sarah Mitchell, Senior Server"
+                label="Employee Mobile App"
+                sublabel="Maria Santos"
               />
               <PhoneFrame
                 src="/demo/manager/index.html?demo=true"
-                label="Manager App"
-                sublabel="James Wilson, Floor Manager"
+                label="Manager Mobile App"
+                sublabel="James Williams"
               />
             </div>
 
