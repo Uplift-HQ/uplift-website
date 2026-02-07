@@ -1669,6 +1669,26 @@ const PricingSection = () => {
           ))}
         </div>
 
+        {/* Flex Pricing Callout */}
+        <div style={{
+          marginTop: '32px',
+          marginBottom: '32px',
+          padding: '20px 24px',
+          background: `${COLORS.slate700}40`,
+          borderRadius: '12px',
+          border: `1px solid ${COLORS.slate700}`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '12px',
+          flexWrap: 'wrap',
+        }}>
+          <Users size={18} color={COLORS.slate400} />
+          <p style={{ color: COLORS.slate200, fontSize: '15px', margin: 0, textAlign: 'center' }}>
+            <span style={{ fontWeight: 600 }}>Seasonal staff?</span> Base + Flex pricing available. Add temporary users at +£2/user premium during peak periods. No commitment. Billed monthly.
+          </p>
+        </div>
+
         {/* Summary box */}
         <div style={{
           background: COLORS.darkSlate,
