@@ -246,7 +246,7 @@ const HeroPhoneMockup = () => (
         </div>
 
         {/* Quick Actions */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', padding: '0 16px 16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', padding: '0 16px 12px' }}>
           {[
             { icon: '📅', label: 'Schedule', bg: '#dbeafe' },
             { icon: '✅', label: 'Tasks', bg: '#dcfce7' },
@@ -266,6 +266,38 @@ const HeroPhoneMockup = () => (
               <div style={{ fontSize: '10px', color: '#475569', fontWeight: 500 }}>{action.label}</div>
             </div>
           ))}
+        </div>
+
+        {/* More Features Row */}
+        <div style={{ padding: '0 16px 16px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a' }}>More</span>
+          </div>
+          <div style={{ display: 'flex', gap: '8px', overflowX: 'auto' }}>
+            {[
+              { icon: '💰', label: 'Payslips', color: '#22c55e' },
+              { icon: '📚', label: 'Learning', color: '#3b82f6' },
+              { icon: '📈', label: 'Performance', color: '#f59e0b' },
+              { icon: '🎁', label: 'Rewards', color: '#ec4899' },
+              { icon: '📋', label: 'Surveys', color: '#8b5cf6' },
+              { icon: '📄', label: 'Documents', color: '#64748b' },
+            ].map((item, i) => (
+              <div key={i} style={{
+                background: 'white',
+                borderRadius: '12px',
+                padding: '10px 12px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.04)',
+                whiteSpace: 'nowrap',
+                border: `1px solid ${item.color}20`,
+              }}>
+                <span style={{ fontSize: '16px' }}>{item.icon}</span>
+                <span style={{ fontSize: '11px', color: '#0f172a', fontWeight: 500 }}>{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -413,7 +445,7 @@ const ManagerDashboardMockup = () => (
         </div>
 
         {/* Pending Actions */}
-        <div style={{ padding: '0 16px 16px' }}>
+        <div style={{ padding: '0 16px 12px' }}>
           <div style={{ fontSize: '14px', fontWeight: 600, color: '#0f172a', marginBottom: '10px' }}>Pending Actions</div>
           {[
             { icon: '⭐', title: 'Skills Verification', subtitle: '5 requests awaiting', badge: '5', color: '#FF6B35' },
@@ -433,6 +465,33 @@ const ManagerDashboardMockup = () => (
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Quick Access - More Manager Features */}
+        <div style={{ padding: '0 16px 16px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '8px' }}>Quick Access</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
+            {[
+              { icon: '🧠', label: 'AI Insights', bg: '#ede9fe' },
+              { icon: '💳', label: 'Expenses', bg: '#dcfce7' },
+              { icon: '📈', label: 'Performance', bg: '#fef3c7' },
+              { icon: '📊', label: 'Reports', bg: '#dbeafe' },
+              { icon: '🎓', label: 'Learning', bg: '#fce7f3' },
+              { icon: '🎁', label: 'Rewards', bg: '#ffedd5' },
+              { icon: '💰', label: 'Payroll', bg: '#d1fae5' },
+              { icon: '👋', label: 'Offboarding', bg: '#f1f5f9' },
+            ].map((item, i) => (
+              <div key={i} style={{
+                background: item.bg,
+                borderRadius: '12px',
+                padding: '10px 4px',
+                textAlign: 'center',
+              }}>
+                <span style={{ fontSize: '18px' }}>{item.icon}</span>
+                <div style={{ fontSize: '8px', color: '#475569', fontWeight: 500, marginTop: '4px' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
