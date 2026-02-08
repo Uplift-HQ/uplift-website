@@ -366,7 +366,7 @@ const ManagerDashboardMockup = () => (
         <div style={{ padding: '12px 16px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
           {[
             { icon: '👥', value: '8', label: 'Team Size', color: '#FF6B35' },
-            { icon: '📈', value: '87', label: 'Avg Momentum', color: '#22c55e' },
+            { icon: '📈', value: '76', label: 'Avg Momentum', color: '#22c55e' },
             { icon: '🎯', value: '94%', label: 'Shifts Filled', color: '#3b82f6' },
             { icon: '📊', value: '92%', label: 'Retention', color: '#f59e0b' },
             { icon: '🕐', value: '312', label: 'Hours This Week', color: '#FF6B35' },
