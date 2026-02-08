@@ -770,7 +770,7 @@ const HeroSection = () => {
             }} />
           </div>
 
-          {/* iPhone - Small, bottom-right corner overlay */}
+          {/* iPhone - Small, bottom-right corner overlay - Worker App Preview */}
           <div style={{
             position: 'absolute',
             bottom: '-20px',
@@ -786,9 +786,11 @@ const HeroSection = () => {
             }}>
               <div style={{
                 width: '100%',
+                height: '320px',
                 borderRadius: '22px',
                 overflow: 'hidden',
                 position: 'relative',
+                background: '#f8fafc',
               }}>
                 {/* Dynamic Island */}
                 <div style={{
@@ -802,11 +804,52 @@ const HeroSection = () => {
                   borderRadius: '8px',
                   zIndex: 20,
                 }} />
-                <img src="/screenshots/worker-app-home.png" alt="Uplift Worker App" style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                }} />
+                {/* Mini Worker App Content */}
+                <div style={{ padding: '28px 10px 8px', fontSize: '8px' }}>
+                  {/* Header */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+                    <div style={{ width: '24px', height: '24px', borderRadius: '6px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <span style={{ color: 'white', fontWeight: 800, fontSize: '10px' }}>G</span>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: '6px', color: '#64748b' }}>Good afternoon,</div>
+                      <div style={{ fontSize: '10px', fontWeight: 700, color: '#0f172a' }}>Maria</div>
+                    </div>
+                  </div>
+                  {/* Momentum Card */}
+                  <div style={{ background: '#0f172a', borderRadius: '10px', padding: '10px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '16px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <span style={{ fontSize: '12px', fontWeight: 800, color: 'white' }}>87</span>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: '7px', color: 'white', fontWeight: 600 }}>Momentum Score</div>
+                      <div style={{ fontSize: '6px', color: '#94a3b8' }}>Level 12 • 2,450 XP</div>
+                    </div>
+                  </div>
+                  {/* Live Bar */}
+                  <div style={{ background: '#1e293b', borderRadius: '6px', padding: '6px 8px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <div style={{ width: '4px', height: '4px', borderRadius: '2px', background: '#22c55e' }} />
+                    <span style={{ fontSize: '6px', color: '#22c55e', fontWeight: 800 }}>LIVE</span>
+                    <span style={{ fontSize: '6px', color: 'white', marginLeft: '4px' }}>12 on shift</span>
+                  </div>
+                  {/* Today Shift */}
+                  <div style={{ background: 'white', borderRadius: '8px', padding: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+                    <div style={{ fontSize: '6px', color: '#64748b', marginBottom: '4px' }}>TODAY'S SHIFT</div>
+                    <div style={{ fontSize: '9px', fontWeight: 600, color: '#0f172a' }}>Senior Server</div>
+                    <div style={{ fontSize: '7px', color: '#64748b' }}>9am - 5pm • Main Restaurant</div>
+                    <div style={{ background: '#FF6B35', borderRadius: '4px', padding: '4px', marginTop: '6px', textAlign: 'center' }}>
+                      <span style={{ fontSize: '7px', color: 'white', fontWeight: 600 }}>🕐 Clock In</span>
+                    </div>
+                  </div>
+                </div>
+                {/* Bottom Nav */}
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'white', borderTop: '1px solid #e2e8f0', padding: '4px 0 12px', display: 'flex', justifyContent: 'space-around' }}>
+                  {['🏠', '📅', '✅', '🎯', '⋯'].map((icon, i) => (
+                    <div key={i} style={{ textAlign: 'center', opacity: i === 0 ? 1 : 0.4 }}>
+                      <div style={{ fontSize: '10px' }}>{icon}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -1047,11 +1090,11 @@ const RecognitionScreen = () => (
 
 const WorkersFirstSection = () => {
   const features = [
-    { title: 'Momentum Score', subtitle: 'See your progress, not just your schedule.', screenshot: '/screenshots/worker-app-home.png' },
-    { title: 'Career Paths', subtitle: 'Know where you\'re going.', screenshot: '/screenshots/worker-app-career.png' },
-    { title: 'Smart Scheduling', subtitle: 'Your time, your visibility.', screenshot: '/screenshots/worker-app-schedule.png' },
-    { title: 'Skills & Learning', subtitle: 'Grow while you work.', screenshot: '/screenshots/worker_skills.jpeg' },
-    { title: 'Recognition & Rewards', subtitle: 'Get seen for what you do.', screenshot: '/screenshots/worker-app-rewards.png' },
+    { title: 'Momentum Score', subtitle: 'See your progress, not just your schedule.', Screen: MomentumScreen },
+    { title: 'Career Paths', subtitle: 'Know where you\'re going.', Screen: CareerScreen },
+    { title: 'Smart Scheduling', subtitle: 'Your time, your visibility.', Screen: ScheduleScreen },
+    { title: 'Skills & Learning', subtitle: 'Grow while you work.', Screen: SkillsScreen },
+    { title: 'Recognition & Rewards', subtitle: 'Get seen for what you do.', Screen: RecognitionScreen },
   ];
 
   return (
