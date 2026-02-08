@@ -1388,7 +1388,7 @@ const ExperiencesSection = () => {
           ) : (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               {active.MockupComponent ? (
-                <active.MockupComponent />
+                React.createElement(active.MockupComponent)
               ) : (
                 <IPhoneFrame scale={1.1}>
                   <img src={active.screenshot} alt={active.title} style={{
