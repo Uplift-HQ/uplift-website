@@ -44,7 +44,8 @@ import {
   TrendingUp, Clock, MapPin, Check, ChevronRight, ChevronLeft, Star,
   Users, BarChart3, Brain, AlertCircle, Bell, Search, Filter,
   CheckCircle2, Zap, Settings, Plus, Eye, MoreHorizontal,
-  Shield, Building2, Briefcase, Link2, Play, Activity, FileText
+  Shield, Building2, Briefcase, Link2, Play, Activity, FileText,
+  CheckSquare, Heart, Gift, Coffee, Film, Crown, Music, Dumbbell
 } from 'lucide-react';
 
 // ============================================================================
@@ -235,106 +236,200 @@ export const ManagerBottomNav = ({ active = 'Dashboard' }) => (
 
 /**
  * Worker Home Screen
- * Shows: Greeting, Momentum Score, LIVE status, certificate alerts, today's shift
+ * Shows: Company branding, Momentum Score, LIVE status, alerts, quick actions, AI recommendations
  */
 export const WorkerHomeScreen = () => (
   <MobileFrame>
-    <div style={{ height: '100%', background: COLORS.background, padding: '44px 16px 80px', overflowY: 'auto' }}>
-      {/* Header with avatar */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #FDA4AF, #FB923C)', overflow: 'hidden' }} />
-          <div>
-            <p style={{ color: COLORS.textSecondary, fontSize: '13px', margin: 0 }}>Good evening,</p>
-            <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 600, margin: '2px 0 0' }}>Sarah</p>
-            <p style={{ color: COLORS.primary, fontSize: '12px', margin: '2px 0 0' }}>Grand Metro Hotels</p>
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-            <MessageSquare size={18} color={COLORS.textSecondary} />
-            <div style={{ position: 'absolute', top: '6px', right: '6px', width: '16px', height: '16px', background: COLORS.primary, borderRadius: '50%', fontSize: '10px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600 }}>3</div>
-          </div>
-          <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Bell size={18} color={COLORS.textSecondary} />
-          </div>
-        </div>
-      </div>
-
-      {/* Momentum Score Card */}
-      <div style={{ background: COLORS.dark, borderRadius: '16px', padding: '16px', marginBottom: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: COLORS.primary, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ color: 'white', fontSize: '22px', fontWeight: 700 }}>87</span>
-          </div>
-          <div style={{ flex: 1 }}>
-            <p style={{ color: 'white', fontSize: '14px', fontWeight: 500, margin: 0 }}>Momentum Score</p>
-            <p style={{ color: COLORS.textMuted, fontSize: '12px', margin: '4px 0 8px' }}>Level 12 • 2,450 XP</p>
-            <div style={{ height: '6px', background: '#334155', borderRadius: '3px', overflow: 'hidden' }}>
-              <div style={{ width: '70%', height: '100%', background: `linear-gradient(90deg, ${COLORS.primary}, #FB923C)` }} />
+    <div style={{ height: '100%', background: COLORS.background, overflowY: 'auto' }}>
+      {/* Header with Company Branding */}
+      <div style={{ background: 'white', padding: '44px 16px 16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <div style={{ width: '52px', height: '52px', borderRadius: '12px', background: COLORS.primary, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ color: 'white', fontSize: '24px', fontWeight: 800 }}>G</span>
+            </div>
+            <div>
+              <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: 0 }}>Good morning,</p>
+              <p style={{ color: COLORS.textPrimary, fontSize: '20px', fontWeight: 700, margin: '2px 0 0' }}>Sarah</p>
+              <p style={{ color: COLORS.primary, fontSize: '12px', fontWeight: 600, margin: '2px 0 0' }}>Grand Metro Hotels</p>
             </div>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <p style={{ color: COLORS.textMuted, fontSize: '11px', margin: 0 }}>550 XP to</p>
-            <p style={{ color: COLORS.textMuted, fontSize: '11px', margin: 0 }}>next</p>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+              <MessageSquare size={20} color={COLORS.textSecondary} />
+              <div style={{ position: 'absolute', top: '-4px', right: '-4px', minWidth: '20px', height: '20px', background: COLORS.primary, borderRadius: '10px', fontSize: '10px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, border: '2px solid white' }}>3</div>
+            </div>
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+              <Bell size={20} color={COLORS.textSecondary} />
+              <div style={{ position: 'absolute', top: '10px', right: '10px', width: '10px', height: '10px', background: COLORS.error, borderRadius: '5px', border: '2px solid #F1F5F9' }} />
+            </div>
+          </div>
+        </div>
+
+        {/* Momentum Score Card */}
+        <div style={{ background: COLORS.dark, borderRadius: '16px', padding: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ width: '64px', height: '64px', borderRadius: '32px', background: COLORS.primary, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid rgba(249, 115, 22, 0.4)', flexShrink: 0 }}>
+              <span style={{ color: 'white', fontSize: '24px', fontWeight: 800 }}>87</span>
+            </div>
+            <div style={{ flexShrink: 0 }}>
+              <p style={{ color: 'white', fontSize: '12px', fontWeight: 600, margin: 0 }}>Momentum Score</p>
+              <p style={{ color: COLORS.textMuted, fontSize: '12px', margin: '2px 0 0' }}>Level 12 • 2,450 XP</p>
+            </div>
+            <div style={{ flex: 1, marginLeft: '16px' }}>
+              <div style={{ height: '6px', background: '#334155', borderRadius: '3px', overflow: 'hidden', marginBottom: '4px' }}>
+                <div style={{ width: '82%', height: '100%', background: COLORS.primary, borderRadius: '3px' }} />
+              </div>
+              <p style={{ color: COLORS.textMuted, fontSize: '11px', margin: 0 }}>550 XP to next</p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* LIVE Status Bar */}
-      <div style={{ background: COLORS.dark, borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{ width: '8px', height: '8px', background: COLORS.success, borderRadius: '50%' }} />
-          <span style={{ color: COLORS.success, fontSize: '12px', fontWeight: 600 }}>LIVE</span>
-        </div>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '12px', color: COLORS.textMuted }}>
-          <span>12 on shift</span>
-          <span>3 On Break</span>
-          <span>5 open</span>
+      <div style={{ background: COLORS.dark, borderRadius: '12px', padding: '12px 16px', margin: '12px 16px', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '8px', height: '8px', background: COLORS.success, borderRadius: '50%' }} />
+        <span style={{ color: COLORS.success, fontSize: '11px', fontWeight: 800, letterSpacing: '1px', marginLeft: '6px', marginRight: '16px' }}>LIVE</span>
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <Users size={14} color="white" />
+            <span style={{ color: 'white', fontSize: '14px', fontWeight: 700 }}>12</span>
+            <span style={{ color: COLORS.textMuted, fontSize: '11px' }}>on shift</span>
+          </div>
+          <div style={{ width: '1px', height: '16px', background: '#475569' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <Clock size={14} color="white" />
+            <span style={{ color: 'white', fontSize: '14px', fontWeight: 700 }}>3</span>
+            <span style={{ color: COLORS.textMuted, fontSize: '11px' }}>break</span>
+          </div>
+          <div style={{ width: '1px', height: '16px', background: '#475569' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <Briefcase size={14} color="white" />
+            <span style={{ color: 'white', fontSize: '14px', fontWeight: 700 }}>5</span>
+            <span style={{ color: COLORS.textMuted, fontSize: '11px' }}>open</span>
+          </div>
         </div>
       </div>
 
-      {/* Certificate Alert */}
-      <div style={{ background: '#FFF7ED', borderLeft: `4px solid ${COLORS.primary}`, borderRadius: '0 12px 12px 0', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#FFEDD5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Shield size={18} color={COLORS.primary} />
-          </div>
-          <div>
-            <p style={{ color: COLORS.textPrimary, fontSize: '13px', fontWeight: 500, margin: 0 }}>Food Safety Certificate</p>
-            <p style={{ color: COLORS.primary, fontSize: '12px', margin: 0 }}>Expires in 5 days</p>
-          </div>
-        </div>
-        <ChevronRight size={18} color={COLORS.textMuted} />
-      </div>
-
-      {/* Today's Shift */}
-      <div style={{ marginBottom: '12px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-          <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, margin: 0 }}>Today's Shift</p>
-          <span style={{ color: COLORS.primary, fontSize: '13px' }}>See All</span>
-        </div>
-        <div style={{ background: 'white', borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}` }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-            <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-                <div style={{ width: '8px', height: '8px', background: COLORS.success, borderRadius: '50%' }} />
-                <span style={{ color: COLORS.textSecondary, fontSize: '12px' }}>Scheduled</span>
-              </div>
-              <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, margin: 0 }}>Senior Server</p>
+      <div style={{ padding: '0 16px 80px' }}>
+        {/* Certificate Alert */}
+        <div style={{ background: '#FFF7ED', borderLeft: `4px solid ${COLORS.primary}`, borderRadius: '0 12px 12px 0', padding: '12px 16px', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: '#FFEDD5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Shield size={18} color={COLORS.primary} />
             </div>
-            <span style={{ background: '#F1F5F9', color: COLORS.textSecondary, fontSize: '12px', padding: '4px 10px', borderRadius: '8px' }}>8h</span>
+            <div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 700, margin: 0 }}>Food Safety Certificate</p>
+              <p style={{ color: COLORS.primary, fontSize: '12px', margin: '2px 0 0' }}>Expires in 5 days</p>
+            </div>
           </div>
-          <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: COLORS.textSecondary, marginBottom: '12px' }}>
-            <span>9:00am - 5:00pm</span>
+          <ChevronRight size={20} color={COLORS.textMuted} />
+        </div>
+
+        {/* Today's Shift */}
+        <div style={{ marginBottom: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700, margin: 0 }}>Today's Shift</p>
+            <span style={{ color: COLORS.primary, fontSize: '12px', fontWeight: 600 }}>See All</span>
           </div>
-          <div style={{ display: 'flex', gap: '8px', fontSize: '13px', color: COLORS.textSecondary }}>
-            <MapPin size={14} />
-            <span>The Grand Hotel - Main Restaurant</span>
+          <div style={{ background: 'white', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
+            <div style={{ padding: '16px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '8px', height: '8px', background: COLORS.success, borderRadius: '4px' }} />
+                  <span style={{ color: COLORS.textSecondary, fontSize: '12px', fontWeight: 600 }}>Confirmed</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: '#F1F5F9', padding: '4px 12px', borderRadius: '20px' }}>
+                  <Clock size={14} color={COLORS.textSecondary} />
+                  <span style={{ color: COLORS.textSecondary, fontSize: '12px', fontWeight: 700 }}>8h</span>
+                </div>
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '20px', fontWeight: 700, margin: '0 0 12px' }}>Senior Server</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Clock size={16} color={COLORS.textSecondary} />
+                  <span style={{ color: COLORS.textSecondary, fontSize: '14px' }}>9:00am - 5:00pm</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <MapPin size={16} color={COLORS.textSecondary} />
+                  <span style={{ color: COLORS.textSecondary, fontSize: '14px' }}>The Grand Hotel - Main Restaurant</span>
+                </div>
+              </div>
+            </div>
+            <button style={{ width: '100%', padding: '16px', background: COLORS.primary, color: 'white', border: 'none', fontSize: '16px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+              <Clock size={22} /> Clock In
+            </button>
           </div>
-          <button style={{ width: '100%', marginTop: '16px', padding: '14px', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
-            <Clock size={16} /> Clock In
-          </button>
+        </div>
+
+        {/* Quick Actions */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', marginBottom: '20px' }}>
+          {[
+            { icon: Calendar, label: 'Schedule', color: COLORS.info },
+            { icon: CheckSquare, label: 'Tasks', color: COLORS.success },
+            { icon: Briefcase, label: 'Shifts', color: COLORS.primary },
+            { icon: Heart, label: 'Feed', color: COLORS.error }
+          ].map((action, i) => (
+            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '16px 8px', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '52px', height: '52px', borderRadius: '12px', background: action.color + '15', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+                <action.icon size={24} color={action.color} />
+              </div>
+              <span style={{ color: COLORS.textSecondary, fontSize: '11px', fontWeight: 600 }}>{action.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* AI Recommended Shifts */}
+        <div style={{ marginBottom: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+            <Zap size={18} color={COLORS.primary} />
+            <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>Recommended for You</span>
+          </div>
+          <div style={{ display: 'flex', gap: '12px', overflowX: 'auto' }}>
+            {[
+              { date: 'Tomorrow', time: '2pm-10pm', location: 'Edinburgh Centre', match: 95, bonus: '+£5/hr' },
+              { date: 'Sat 25th', time: '8am-4pm', location: 'Glasgow West', match: 88, bonus: null }
+            ].map((shift, i) => (
+              <div key={i} style={{ minWidth: '160px', background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: COLORS.success + '15', padding: '4px 8px', borderRadius: '20px' }}>
+                    <TrendingUp size={12} color={COLORS.success} />
+                    <span style={{ color: COLORS.success, fontSize: '11px', fontWeight: 700 }}>{shift.match}%</span>
+                  </div>
+                  {shift.bonus && (
+                    <div style={{ background: COLORS.primary, padding: '4px 8px', borderRadius: '20px' }}>
+                      <span style={{ color: 'white', fontSize: '10px', fontWeight: 700 }}>{shift.bonus}</span>
+                    </div>
+                  )}
+                </div>
+                <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: '0 0 2px' }}>{shift.date}</p>
+                <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600, margin: '0 0 8px' }}>{shift.time}</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '12px' }}>
+                  <MapPin size={12} color={COLORS.textMuted} />
+                  <span style={{ color: COLORS.textMuted, fontSize: '11px' }}>{shift.location}</span>
+                </div>
+                <button style={{ width: '100%', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '8px', padding: '8px', fontSize: '12px', fontWeight: 700, cursor: 'pointer' }}>Claim</button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stats Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginBottom: '20px' }}>
+          {[
+            { icon: Zap, value: '7', label: 'Day Streak', color: COLORS.warning },
+            { icon: Award, value: '6', label: 'Badges', color: COLORS.info },
+            { icon: TrendingUp, value: '#3', label: 'Rank', color: COLORS.success },
+            { icon: CheckSquare, value: '5', label: 'Tasks', color: COLORS.primary }
+          ].map((stat, i) => (
+            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: stat.color + '20', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px' }}>
+                <stat.icon size={20} color={stat.color} />
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '24px', fontWeight: 800, margin: '0 0 2px' }}>{stat.value}</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: 0 }}>{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -345,108 +440,227 @@ export const WorkerHomeScreen = () => (
 
 /**
  * Worker Schedule Screen
- * Shows: Week view, stats, upcoming shifts with timeline
+ * Shows: Week/Month toggle, stats bar, week calendar, quick actions, shift cards with department colors
  */
 export const WorkerScheduleScreen = () => (
   <MobileFrame>
-    <div style={{ height: '100%', background: COLORS.background, padding: '44px 16px 80px', overflowY: 'auto' }}>
+    <div style={{ height: '100%', background: COLORS.background, overflowY: 'auto' }}>
       {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '44px 16px 12px', background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
         <div>
           <p style={{ color: COLORS.textPrimary, fontSize: '22px', fontWeight: 700, margin: 0 }}>My Schedule</p>
-          <p style={{ color: COLORS.textSecondary, fontSize: '13px', margin: '4px 0 0' }}>26 Jan - 1 Feb</p>
+          <p style={{ color: COLORS.textSecondary, fontSize: '13px', margin: '4px 0 0' }}>27 Jan - 2 Feb</p>
         </div>
-        <div style={{ display: 'flex', background: COLORS.border, borderRadius: '10px', overflow: 'hidden' }}>
-          <span style={{ padding: '8px 14px', background: COLORS.primary, color: 'white', fontSize: '13px', fontWeight: 500 }}>Week</span>
-          <span style={{ padding: '8px 14px', color: COLORS.textSecondary, fontSize: '13px' }}>Month</span>
-        </div>
-      </div>
-
-      {/* Stats Row */}
-      <div style={{ display: 'flex', gap: '12px', background: 'white', borderRadius: '12px', padding: '14px', marginBottom: '16px', border: `1px solid ${COLORS.border}` }}>
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#FFF7ED', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Clock size={18} color={COLORS.primary} />
-          </div>
-          <div>
-            <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>33h</p>
-            <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>This week</p>
-          </div>
-        </div>
-        <div style={{ width: '1px', background: COLORS.border }} />
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#DCFCE7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Calendar size={18} color={COLORS.success} />
-          </div>
-          <div>
-            <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>5</p>
-            <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>Upcoming</p>
-          </div>
-        </div>
-        <div style={{ width: '1px', background: COLORS.border }} />
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Check size={18} color={COLORS.info} />
-          </div>
-          <div>
-            <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>5</p>
-            <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>Confirmed</p>
-          </div>
+        <div style={{ display: 'flex', gap: '4px' }}>
+          <span style={{ padding: '8px 14px', background: COLORS.primary, color: 'white', fontSize: '14px', fontWeight: 700, borderRadius: '8px' }}>Week</span>
+          <span style={{ padding: '8px 14px', background: '#F1F5F9', color: COLORS.textSecondary, fontSize: '14px', fontWeight: 700, borderRadius: '8px' }}>Month</span>
         </div>
       </div>
 
-      {/* Week Navigation */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-        <ChevronLeft size={20} color={COLORS.textMuted} />
-        <span style={{ color: COLORS.primary, fontSize: '14px', fontWeight: 500 }}>Today</span>
-        <ChevronRight size={20} color={COLORS.textMuted} />
-      </div>
-
-      {/* Week Days */}
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
-        {[
-          { day: 'Mon', date: 26, dot: COLORS.error },
-          { day: 'Tue', date: 27, dot: COLORS.info },
-          { day: 'Wed', date: 28, dot: COLORS.success },
-          { day: 'Thu', date: 29, dot: COLORS.warning },
-          { day: 'Fri', date: 30, dot: null }
-        ].map((d, i) => (
-          <div key={i} style={{ flex: 1, textAlign: 'center', padding: '10px 6px', borderRadius: '12px', background: 'white', border: `1px solid ${COLORS.border}` }}>
-            <p style={{ fontSize: '11px', color: COLORS.textSecondary, margin: 0 }}>{d.day}</p>
-            <p style={{ fontSize: '18px', fontWeight: 600, color: COLORS.textPrimary, margin: '4px 0' }}>{d.date}</p>
-            <p style={{ fontSize: '10px', color: COLORS.textSecondary, margin: 0 }}>Jan</p>
-            {d.dot && <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: d.dot, margin: '6px auto 0' }} />}
+      <div style={{ padding: '12px 16px 80px' }}>
+        {/* Stats Bar */}
+        <div style={{ display: 'flex', background: 'white', borderRadius: '12px', padding: '12px', marginBottom: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: COLORS.primary + '20', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Clock size={18} color={COLORS.primary} />
+            </div>
+            <div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>33h</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>This week</p>
+            </div>
           </div>
-        ))}
-      </div>
-
-      {/* Action Buttons */}
-      <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }}>
-        <button style={{ flex: 1, background: COLORS.primary, color: 'white', border: 'none', borderRadius: '12px', padding: '14px', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
-          <Clock size={16} /> Clock In
-        </button>
-        <button style={{ flex: 1, background: 'white', color: COLORS.primary, border: `2px solid ${COLORS.primary}`, borderRadius: '12px', padding: '14px', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
-          <Calendar size={16} /> Request Time Off
-        </button>
-      </div>
-
-      {/* Upcoming Shifts */}
-      <p style={{ fontWeight: 600, fontSize: '16px', color: COLORS.textPrimary, marginBottom: '12px' }}>Upcoming Shifts</p>
-      <div style={{ background: 'white', borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}`, borderLeft: `4px solid ${COLORS.info}` }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-          <div>
-            <span style={{ background: '#DBEAFE', color: COLORS.info, fontSize: '11px', fontWeight: 500, padding: '4px 8px', borderRadius: '6px' }}>Front of House</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-              <Check size={14} color={COLORS.success} />
-              <span style={{ color: COLORS.success, fontSize: '12px', fontWeight: 500 }}>Confirmed</span>
+          <div style={{ width: '1px', background: COLORS.border, margin: '0 8px' }} />
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: COLORS.success + '20', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Calendar size={18} color={COLORS.success} />
+            </div>
+            <div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>5</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>Upcoming</p>
+            </div>
+          </div>
+          <div style={{ width: '1px', background: COLORS.border, margin: '0 8px' }} />
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: COLORS.info + '20', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <CheckCircle2 size={18} color={COLORS.info} />
+            </div>
+            <div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>5</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: 0 }}>Confirmed</p>
             </div>
           </div>
         </div>
-        <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, margin: '0 0 8px' }}>Senior Server</p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '13px', color: COLORS.textSecondary }}>
-          <span>25 Jan (Sun)</span>
-          <span>09:00 - 17:00</span>
-          <span style={{ background: '#F1F5F9', padding: '2px 8px', borderRadius: '6px' }}>8h</span>
+
+        {/* Week Calendar */}
+        <div style={{ background: 'white', borderRadius: '12px', padding: '12px', marginBottom: '12px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <ChevronLeft size={20} color={COLORS.textSecondary} />
+            </div>
+            <span style={{ color: COLORS.primary, fontSize: '12px', fontWeight: 600, background: COLORS.primary + '15', padding: '6px 12px', borderRadius: '8px' }}>Today</span>
+            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <ChevronRight size={20} color={COLORS.textSecondary} />
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            {[
+              { day: 'Mon', date: 27, isToday: true, shifts: [COLORS.info] },
+              { day: 'Tue', date: 28, isToday: false, shifts: [COLORS.success] },
+              { day: 'Wed', date: 29, isToday: false, shifts: [COLORS.primary] },
+              { day: 'Thu', date: 30, isToday: false, shifts: [COLORS.warning] },
+              { day: 'Fri', date: 31, isToday: false, shifts: [] },
+              { day: 'Sat', date: 1, isToday: false, shifts: [COLORS.purple] },
+              { day: 'Sun', date: 2, isToday: false, shifts: [] }
+            ].map((d, i) => (
+              <div key={i} style={{
+                flex: 1, textAlign: 'center', padding: '10px 4px', borderRadius: '12px',
+                background: d.isToday ? COLORS.primary + '10' : '#F8FAFC',
+                border: d.isToday ? `2px solid ${COLORS.primary}` : d.shifts.length > 0 ? `1px solid ${COLORS.border}` : '1px solid transparent',
+                boxShadow: d.shifts.length > 0 ? '0 1px 3px rgba(0,0,0,0.05)' : 'none'
+              }}>
+                <p style={{ fontSize: '10px', color: d.isToday ? COLORS.primary : COLORS.textSecondary, fontWeight: 600, margin: 0 }}>{d.day}</p>
+                <div style={{
+                  width: '28px', height: '28px', borderRadius: '14px', margin: '4px auto',
+                  background: d.isToday ? COLORS.primary : 'transparent',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                  <p style={{ fontSize: '14px', fontWeight: 700, color: d.isToday ? 'white' : COLORS.textPrimary, margin: 0 }}>{d.date}</p>
+                </div>
+                <p style={{ fontSize: '9px', color: d.isToday ? COLORS.primary : COLORS.textMuted, margin: '0 0 4px' }}>{d.date <= 27 ? 'Jan' : d.date <= 31 ? 'Jan' : 'Feb'}</p>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '2px', minHeight: '6px' }}>
+                  {d.shifts.map((color, j) => (
+                    <div key={j} style={{ width: '6px', height: '6px', borderRadius: '3px', background: color }} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Actions */}
+        <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
+          <button style={{ flex: 1, background: COLORS.primary, color: 'white', border: 'none', borderRadius: '10px', padding: '14px', fontSize: '14px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+            <Clock size={18} /> Clock In
+          </button>
+          <button style={{ flex: 1, background: 'white', color: COLORS.primary, border: `2px solid ${COLORS.primary}`, borderRadius: '10px', padding: '14px', fontSize: '14px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+            <Calendar size={18} /> Time Off
+          </button>
+        </div>
+
+        {/* Upcoming Shifts */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+          <span style={{ fontWeight: 700, fontSize: '16px', color: COLORS.textPrimary }}>Upcoming Shifts</span>
+          <span style={{ background: COLORS.warning + '20', color: COLORS.warning, fontSize: '11px', fontWeight: 600, padding: '4px 8px', borderRadius: '6px' }}>1 pending</span>
+        </div>
+
+        {/* Enhanced Shift Card */}
+        <div style={{ background: 'white', borderRadius: '16px', padding: '16px', marginBottom: '12px', borderLeft: `4px solid ${COLORS.info}`, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                <Briefcase size={12} color={COLORS.info} />
+                <span style={{ background: COLORS.info + '15', color: COLORS.info, fontSize: '10px', fontWeight: 600, padding: '2px 8px', borderRadius: '4px' }}>Front of House</span>
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '18px', fontWeight: 700, margin: 0 }}>Senior Server</p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: COLORS.success + '15', padding: '4px 8px', borderRadius: '6px' }}>
+              <CheckCircle2 size={12} color={COLORS.success} />
+              <span style={{ color: COLORS.success, fontSize: '11px', fontWeight: 600 }}>Confirmed</span>
+            </div>
+          </div>
+
+          {/* Date & Time */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={12} color={COLORS.textSecondary} />
+              <span style={{ color: COLORS.textSecondary, fontSize: '12px', fontWeight: 500 }}>27 Jan (Mon)</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Clock size={12} color={COLORS.textSecondary} />
+              <span style={{ color: COLORS.textSecondary, fontSize: '12px', fontWeight: 600 }}>09:00 - 17:00</span>
+              <span style={{ background: '#F1F5F9', color: COLORS.textSecondary, fontSize: '11px', fontWeight: 700, padding: '2px 6px', borderRadius: '4px' }}>8h</span>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div style={{ marginBottom: '12px' }}>
+            <div style={{ height: '4px', background: '#E2E8F0', borderRadius: '2px', overflow: 'hidden' }}>
+              <div style={{ width: '0%', height: '100%', background: COLORS.success, borderRadius: '2px' }} />
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
+              <span style={{ fontSize: '10px', color: COLORS.textMuted }}>09:00</span>
+              <span style={{ fontSize: '10px', color: COLORS.textMuted }}>17:00</span>
+            </div>
+          </div>
+
+          {/* Location */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '12px', borderTop: `1px solid ${COLORS.border}` }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <MapPin size={14} color={COLORS.textSecondary} />
+              <span style={{ color: COLORS.textSecondary, fontSize: '13px' }}>The Grand Hotel - Main Restaurant</span>
+            </div>
+            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: COLORS.primary + '15', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <MapPin size={16} color={COLORS.primary} />
+            </div>
+          </div>
+
+          {/* Team & Footer */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '12px', borderTop: `1px solid ${COLORS.border}`, marginTop: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Users size={14} color={COLORS.textMuted} />
+              <div style={{ display: 'flex' }}>
+                {['SM', 'JD', 'EW'].map((initials, i) => (
+                  <div key={i} style={{ width: '24px', height: '24px', borderRadius: '12px', background: COLORS.info, display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: i > 0 ? '-8px' : 0, border: '2px solid white' }}>
+                    <span style={{ color: 'white', fontSize: '8px', fontWeight: 700 }}>{initials}</span>
+                  </div>
+                ))}
+              </div>
+              <span style={{ color: COLORS.textMuted, fontSize: '11px' }}>3 team</span>
+            </div>
+            <ChevronRight size={20} color={COLORS.textMuted} />
+          </div>
+        </div>
+
+        {/* Available Shifts Section */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', marginTop: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontWeight: 700, fontSize: '16px', color: COLORS.textPrimary }}>Available Shifts</span>
+            <span style={{ background: COLORS.success + '20', color: COLORS.success, fontSize: '10px', fontWeight: 600, padding: '4px 8px', borderRadius: '6px' }}>3 open</span>
+          </div>
+          <span style={{ color: COLORS.primary, fontSize: '13px', fontWeight: 700 }}>See all</span>
+        </div>
+
+        <div style={{ display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '4px' }}>
+          {[
+            { role: 'Bartender', dept: 'Bar', color: COLORS.purple, date: '25 Jan', day: 'Sat', time: '18:00 - 02:00', location: 'The Crown Pub', rate: '£14.50/hr', urgent: true },
+            { role: 'Server', dept: 'Front of House', color: COLORS.info, date: '26 Jan', day: 'Sun', time: '11:00 - 16:00', location: 'City Bistro', rate: '£12.00/hr', urgent: false }
+          ].map((shift, i) => (
+            <div key={i} style={{ minWidth: '150px', background: 'white', borderRadius: '12px', padding: '12px', border: shift.urgent ? `2px solid ${COLORS.error}` : `1px solid ${COLORS.border}`, boxShadow: '0 1px 3px rgba(0,0,0,0.05)', position: 'relative' }}>
+              {shift.urgent && (
+                <div style={{ position: 'absolute', top: 0, right: 0, background: COLORS.error, padding: '2px 8px', borderTopRightRadius: '12px', borderBottomLeftRadius: '6px' }}>
+                  <span style={{ color: 'white', fontSize: '9px', fontWeight: 700 }}>URGENT</span>
+                </div>
+              )}
+              <div style={{ background: shift.color + '15', padding: '2px 6px', borderRadius: '4px', display: 'inline-block', marginBottom: '6px' }}>
+                <span style={{ color: shift.color, fontSize: '9px', fontWeight: 600 }}>{shift.dept}</span>
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 700, margin: '0 0 8px' }}>{shift.role}</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '4px' }}>
+                <Calendar size={11} color={COLORS.textMuted} />
+                <span style={{ color: COLORS.textMuted, fontSize: '10px' }}>{shift.date} ({shift.day})</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '4px' }}>
+                <Clock size={11} color={COLORS.textMuted} />
+                <span style={{ color: COLORS.textMuted, fontSize: '10px' }}>{shift.time}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '8px', borderTop: `1px solid ${COLORS.border}` }}>
+                <span style={{ color: COLORS.success, fontSize: '12px', fontWeight: 700 }}>{shift.rate}</span>
+              </div>
+              <button style={{ width: '100%', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '8px', padding: '8px', fontSize: '11px', fontWeight: 700, marginTop: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', cursor: 'pointer' }}>
+                <Plus size={14} /> Claim
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -457,77 +671,161 @@ export const WorkerScheduleScreen = () => (
 
 /**
  * Worker Career Path Screen
- * Shows: Current role, momentum score, progress to next role
+ * Shows: Tabs (Career Path, Skills, Training), current role card with XP summary, career ladder, achievements
  */
 export const WorkerCareerScreen = () => (
   <MobileFrame>
-    <div style={{ height: '100%', background: COLORS.background, padding: '44px 16px 80px', overflowY: 'auto' }}>
+    <div style={{ height: '100%', background: COLORS.background, overflowY: 'auto' }}>
       {/* Header */}
-      <div style={{ marginBottom: '8px' }}>
-        <p style={{ color: COLORS.primary, fontSize: '13px', margin: '0 0 4px' }}>← Back</p>
+      <div style={{ padding: '44px 16px 12px', background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+        <p style={{ color: COLORS.primary, fontSize: '14px', fontWeight: 700, margin: '0 0 8px' }}>← Back</p>
         <p style={{ color: COLORS.textPrimary, fontSize: '22px', fontWeight: 700, margin: 0 }}>Career Path</p>
-        <p style={{ color: COLORS.textSecondary, fontSize: '13px', marginTop: '4px' }}>Your Career Path</p>
+        <p style={{ color: COLORS.textSecondary, fontSize: '13px', marginTop: '4px' }}>Your Career Journey</p>
       </div>
 
-      {/* Tabs */}
-      <div style={{ display: 'flex', gap: '24px', marginBottom: '16px', borderBottom: `2px solid ${COLORS.border}` }}>
-        <span style={{ color: COLORS.primary, fontSize: '14px', fontWeight: 500, paddingBottom: '8px', borderBottom: `2px solid ${COLORS.primary}`, marginBottom: '-2px' }}>Career Path</span>
-        <span style={{ color: COLORS.textSecondary, fontSize: '14px', paddingBottom: '8px' }}>Skills</span>
-        <span style={{ color: COLORS.textSecondary, fontSize: '14px', paddingBottom: '8px' }}>Training</span>
+      {/* Tab Navigation */}
+      <div style={{ display: 'flex', background: 'white', padding: '0 16px 12px', borderBottom: `1px solid ${COLORS.border}` }}>
+        {[
+          { label: 'Career Path', active: true },
+          { label: 'Skills', active: false },
+          { label: 'Training', active: false }
+        ].map((tab, i) => (
+          <div key={i} style={{ flex: 1, textAlign: 'center', paddingBottom: '12px', borderBottom: tab.active ? `2px solid ${COLORS.primary}` : '2px solid transparent', marginBottom: '-1px' }}>
+            <span style={{ color: tab.active ? COLORS.primary : COLORS.textSecondary, fontSize: '14px', fontWeight: tab.active ? 700 : 500 }}>{tab.label}</span>
+          </div>
+        ))}
       </div>
 
-      {/* Current Role Card */}
-      <div style={{ background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primaryDark} 100%)`, borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Building2 size={20} color="white" />
-          </div>
-          <div>
-            <p style={{ color: 'white', fontSize: '18px', fontWeight: 600, margin: 0 }}>Floor Associate</p>
-            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '12px', margin: 0 }}>Level 2 • Since March 2025</p>
-          </div>
-        </div>
-        <div style={{ marginBottom: '12px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-            <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '12px' }}>Momentum Score</span>
-            <span style={{ color: 'white', fontSize: '18px', fontWeight: 700 }}>85</span>
-          </div>
-          <div style={{ height: '6px', background: 'rgba(255,255,255,0.3)', borderRadius: '3px', overflow: 'hidden' }}>
-            <div style={{ width: '85%', height: '100%', background: 'white' }} />
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          {[
-            { value: '5,300', label: 'Total XP' },
-            { value: '9', label: 'Verified' },
-            { value: '1', label: 'Courses' }
-          ].map((stat, i) => (
-            <div key={i} style={{ flex: 1, background: 'rgba(255,255,255,0.2)', borderRadius: '10px', padding: '12px', textAlign: 'center' }}>
-              <p style={{ color: 'white', fontSize: '18px', fontWeight: 700, margin: 0 }}>{stat.value}</p>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '11px', margin: 0 }}>{stat.label}</p>
+      <div style={{ padding: '16px 16px 80px' }}>
+        {/* Current Role Card */}
+        <div style={{ background: COLORS.primary, borderRadius: '20px', padding: '20px', marginBottom: '20px', boxShadow: '0 8px 24px rgba(249, 115, 22, 0.3)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <Briefcase size={32} color="white" />
+            <div style={{ flex: 1 }}>
+              <p style={{ color: 'white', fontSize: '20px', fontWeight: 700, margin: 0 }}>Floor Associate</p>
+              <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '12px', margin: '4px 0 0' }}>Level 2 • Since March 2025</p>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Progress to Next Role */}
-      <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>Progress to Next Role</p>
-      <div style={{ background: 'white', borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}`, borderLeft: `4px solid ${COLORS.primary}` }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div>
-            <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, margin: 0 }}>Senior Floor Associate</p>
-            <p style={{ color: COLORS.primary, fontSize: '13px', margin: '4px 0' }}>£13-15/hr</p>
-            <p style={{ color: COLORS.success, fontSize: '12px', margin: 0 }}>Ready now</p>
           </div>
-          <span style={{ background: '#DCFCE7', color: '#16A34A', fontSize: '13px', fontWeight: 600, padding: '4px 10px', borderRadius: '8px' }}>92%</span>
-        </div>
-        <div style={{ marginTop: '12px' }}>
-          {['Customer Service', 'Cash Handling'].map((skill, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-              <Check size={14} color={COLORS.success} />
-              <span style={{ color: COLORS.success, fontSize: '13px' }}>{skill}</span>
+
+          {/* Momentum Score Section */}
+          <div style={{ marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+              <TrendingUp size={16} color="white" />
+              <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '12px', flex: 1 }}>Momentum Score</span>
+              <span style={{ color: 'white', fontSize: '24px', fontWeight: 800 }}>85</span>
             </div>
-          ))}
+            <div style={{ height: '6px', background: 'rgba(255,255,255,0.3)', borderRadius: '3px', overflow: 'hidden' }}>
+              <div style={{ width: '85%', height: '100%', background: 'white', borderRadius: '3px' }} />
+            </div>
+          </div>
+
+          {/* XP Summary */}
+          <div style={{ display: 'flex', gap: '8px' }}>
+            {[
+              { value: '5,300', label: 'Total XP' },
+              { value: '9', label: 'Verified' },
+              { value: '1', label: 'Courses' }
+            ].map((stat, i) => (
+              <div key={i} style={{ flex: 1, background: 'rgba(255,255,255,0.2)', borderRadius: '12px', padding: '14px', textAlign: 'center' }}>
+                <p style={{ color: 'white', fontSize: '20px', fontWeight: 800, margin: 0 }}>{stat.value}</p>
+                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '11px', margin: '2px 0 0' }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Progress to Next Role */}
+        <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Progress to Next Role</p>
+
+        {/* Career Ladder Cards */}
+        {[
+          { title: 'Senior Floor Associate', salary: '£13-15/hr', match: 92, ready: 'Ready now', color: COLORS.success, requirements: ['Customer Service', 'Cash Handling'], isCurrent: true },
+          { title: 'Team Lead', salary: '£16-18/hr', match: 67, ready: '~6 months', color: COLORS.warning, requirements: ['Leadership', 'Training'], isCurrent: false }
+        ].map((role, i) => (
+          <div key={i} style={{ display: 'flex', marginBottom: '16px' }}>
+            {/* Path Connector */}
+            <div style={{ width: '24px', alignItems: 'center', display: 'flex', flexDirection: 'column', marginRight: '16px' }}>
+              <div style={{ width: '16px', height: '16px', borderRadius: '8px', background: role.isCurrent ? COLORS.primary : 'white', border: role.isCurrent ? 'none' : `3px solid ${COLORS.border}` }} />
+              {i < 1 && <div style={{ flex: 1, width: '3px', background: COLORS.border, marginTop: '4px' }} />}
+            </div>
+
+            {/* Role Card */}
+            <div style={{ flex: 1, background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
+                <div style={{ flex: 1 }}>
+                  <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700, margin: 0 }}>{role.title}</p>
+                  <p style={{ color: COLORS.success, fontSize: '12px', fontWeight: 600, margin: '2px 0 0' }}>{role.salary}</p>
+                </div>
+                <div style={{ background: role.color + '20', padding: '6px 12px', borderRadius: '20px' }}>
+                  <span style={{ color: role.color, fontSize: '14px', fontWeight: 700 }}>{role.match}%</span>
+                </div>
+              </div>
+              <p style={{ color: COLORS.textSecondary, fontSize: '13px', fontWeight: 700, margin: '8px 0 12px' }}>{role.ready}</p>
+
+              {/* Requirements */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {role.requirements.map((req, j) => (
+                  <div key={j} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    {role.match >= 85 ? (
+                      <CheckCircle2 size={14} color={COLORS.success} />
+                    ) : (
+                      <div style={{ width: '14px', height: '14px', borderRadius: '7px', border: `2px solid ${COLORS.border}` }} />
+                    )}
+                    <span style={{ color: role.match >= 85 ? COLORS.success : COLORS.textSecondary, fontSize: '13px' }}>{req}</span>
+                  </div>
+                ))}
+              </div>
+
+              {role.isCurrent && (
+                <button style={{ width: '100%', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '12px', padding: '14px', marginTop: '16px', fontSize: '14px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+                  View Details <ChevronRight size={16} />
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+
+        {/* Achievements */}
+        <div style={{ marginTop: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>Achievements</span>
+            <span style={{ color: COLORS.primary, fontSize: '13px', fontWeight: 700 }}>See All</span>
+          </div>
+
+          <div style={{ display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '4px' }}>
+            {[
+              { icon: Star, title: 'Customer Service Expert', date: 'Jan 5, 2026', color: COLORS.warning, earned: true },
+              { icon: TrendingUp, title: '100 Day Streak', date: 'Dec 28, 2025', color: COLORS.success, earned: true },
+              { icon: Users, title: 'Team Player', progress: '8/10', color: COLORS.info, earned: false }
+            ].map((achievement, i) => (
+              <div key={i} style={{ minWidth: '130px', background: achievement.earned ? 'white' : '#F8FAFC', borderRadius: '16px', padding: '16px', textAlign: 'center', boxShadow: achievement.earned ? '0 1px 3px rgba(0,0,0,0.05)' : 'none' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '24px', background: achievement.earned ? '#F1F5F9' : COLORS.border, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 8px' }}>
+                  <achievement.icon size={20} color={achievement.color} />
+                </div>
+                <p style={{ color: COLORS.textPrimary, fontSize: '12px', fontWeight: 700, margin: '0 0 4px' }}>{achievement.title}</p>
+                {achievement.earned ? (
+                  <p style={{ color: COLORS.textMuted, fontSize: '10px', margin: 0 }}>{achievement.date}</p>
+                ) : (
+                  <div style={{ marginTop: '8px' }}>
+                    <div style={{ height: '4px', background: COLORS.border, borderRadius: '2px', overflow: 'hidden' }}>
+                      <div style={{ width: '80%', height: '100%', background: COLORS.primary, borderRadius: '2px' }} />
+                    </div>
+                    <p style={{ color: COLORS.textMuted, fontSize: '10px', margin: '4px 0 0', textAlign: 'center' }}>{achievement.progress}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Growth Tips */}
+        <div style={{ background: COLORS.primary + '15', borderRadius: '16px', padding: '16px', marginTop: '20px', borderLeft: `4px solid ${COLORS.primary}`, display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <Target size={24} color={COLORS.primary} />
+          <div style={{ flex: 1 }}>
+            <p style={{ color: COLORS.primary, fontSize: '14px', fontWeight: 700, margin: '0 0 4px' }}>Next Goal</p>
+            <p style={{ color: COLORS.textSecondary, fontSize: '13px', margin: 0, lineHeight: '18px' }}>Complete Advanced Cash Handling training to reach Senior Floor Associate eligibility</p>
+          </div>
+          <ChevronRight size={20} color={COLORS.primary} />
         </div>
       </div>
 
@@ -538,103 +836,156 @@ export const WorkerCareerScreen = () => (
 
 /**
  * Worker Rewards Screen
- * Shows: Points balance, level progress, perks and discounts
+ * Shows: Dark header with tier card, stats row, category tabs, featured offers, perk list
  */
 export const WorkerRewardsScreen = () => (
   <MobileFrame>
     <div style={{ height: '100%', background: COLORS.background, overflowY: 'auto' }}>
-      {/* Dark Header */}
-      <div style={{ background: COLORS.dark, padding: '44px 16px 20px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
-          <span style={{ color: COLORS.primary, fontSize: '13px' }}>← Back</span>
-          <p style={{ color: 'white', fontSize: '18px', fontWeight: 600, margin: 0, flex: 1, textAlign: 'center' }}>Rewards</p>
-          <div style={{ width: '40px' }} />
+      {/* Dark Header with Tier Card */}
+      <div style={{ background: COLORS.dark, padding: '44px 16px 24px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+          <div>
+            <p style={{ color: 'white', fontSize: '22px', fontWeight: 700, margin: 0 }}>Rewards</p>
+            <p style={{ color: COLORS.textMuted, fontSize: '13px', margin: '4px 0 0' }}>Your perks & benefits</p>
+          </div>
+          <div style={{ width: '44px', height: '44px', borderRadius: '22px', background: '#334155', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Gift size={22} color={COLORS.primary} />
+          </div>
         </div>
-        <p style={{ color: COLORS.primary, fontSize: '13px', textAlign: 'center', margin: 0 }}>Grand Metro Hotels Perks</p>
 
-        {/* Level Progress */}
-        <div style={{ background: '#334155', borderRadius: '12px', padding: '14px', marginTop: '16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Award size={16} color={COLORS.primary} />
-              <span style={{ color: COLORS.primary, fontWeight: 600, fontSize: '14px' }}>Gold</span>
+        {/* Tier Card */}
+        <div style={{ background: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)', borderRadius: '20px', padding: '20px', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '28px', background: 'linear-gradient(135deg, #FCD34D, #F97316)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 16px rgba(249, 115, 22, 0.4)' }}>
+                <Crown size={28} color="white" />
+              </div>
+              <div>
+                <p style={{ color: 'white', fontSize: '20px', fontWeight: 800, margin: 0 }}>Gold Member</p>
+                <p style={{ color: COLORS.textMuted, fontSize: '12px', margin: '2px 0 0' }}>550 pts to Platinum</p>
+              </div>
             </div>
-            <span style={{ color: COLORS.textMuted, fontSize: '12px' }}>Level 3</span>
+            <span style={{ color: COLORS.primary, fontSize: '12px', fontWeight: 700 }}>View Tiers</span>
           </div>
-          <div style={{ height: '6px', background: '#475569', borderRadius: '3px', overflow: 'hidden' }}>
-            <div style={{ width: '70%', height: '100%', background: COLORS.primary }} />
-          </div>
-          <p style={{ color: COLORS.textMuted, fontSize: '11px', textAlign: 'right', margin: '6px 0 0' }}>520 pts to Platinum</p>
-        </div>
 
-        {/* Stats */}
-        <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-          <div style={{ flex: 1, background: COLORS.primary, borderRadius: '12px', padding: '14px' }}>
-            <Star size={16} color="white" style={{ marginBottom: '4px' }} />
-            <p style={{ color: 'white', fontSize: '22px', fontWeight: 700, margin: 0 }}>1,980</p>
-            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '11px', margin: 0 }}>Available Points</p>
+          {/* Progress to Next Tier */}
+          <div style={{ marginBottom: '16px' }}>
+            <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
+              <div style={{ width: '82%', height: '100%', background: 'linear-gradient(90deg, #FCD34D, #F97316)', borderRadius: '4px' }} />
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px' }}>
+              <span style={{ color: COLORS.textMuted, fontSize: '10px' }}>Gold</span>
+              <span style={{ color: COLORS.textMuted, fontSize: '10px' }}>Platinum</span>
+            </div>
           </div>
-          <div style={{ flex: 1, background: COLORS.success, borderRadius: '12px', padding: '14px' }}>
-            <TrendingUp size={16} color="white" style={{ marginBottom: '4px' }} />
-            <p style={{ color: 'white', fontSize: '22px', fontWeight: 700, margin: 0 }}>£848</p>
-            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '11px', margin: 0 }}>Total Saved</p>
-          </div>
-        </div>
 
-        {/* Action Buttons */}
-        <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-          <button style={{ flex: 1, background: COLORS.primary, color: 'white', border: 'none', borderRadius: '10px', padding: '12px', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}>
-            % Perks & Discounts
-          </button>
-          <button style={{ flex: 1, background: '#475569', color: 'white', border: 'none', borderRadius: '10px', padding: '12px', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}>
-            Redeem Points
-          </button>
+          {/* Stats Row */}
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ flex: 1, background: 'rgba(255,255,255,0.1)', borderRadius: '12px', padding: '14px', textAlign: 'center' }}>
+              <p style={{ color: 'white', fontSize: '24px', fontWeight: 800, margin: 0 }}>2,450</p>
+              <p style={{ color: COLORS.textMuted, fontSize: '11px', margin: '2px 0 0' }}>Available Points</p>
+            </div>
+            <div style={{ flex: 1, background: 'rgba(255,255,255,0.1)', borderRadius: '12px', padding: '14px', textAlign: 'center' }}>
+              <p style={{ color: 'white', fontSize: '24px', fontWeight: 800, margin: 0 }}>£127</p>
+              <p style={{ color: COLORS.textMuted, fontSize: '11px', margin: '2px 0 0' }}>Total Saved</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Light Content */}
       <div style={{ padding: '16px 16px 80px' }}>
-        {/* Filter Tabs */}
+        {/* Tab Buttons */}
         <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
-          {['All', 'Dining', 'Shopping', 'Entertainment'].map((tab, i) => (
-            <span key={i} style={{
-              padding: '8px 14px',
-              borderRadius: '20px',
-              fontSize: '12px',
-              fontWeight: 500,
-              background: i === 0 ? COLORS.primary : 'white',
-              color: i === 0 ? 'white' : COLORS.textSecondary,
-              border: i === 0 ? 'none' : `1px solid ${COLORS.border}`
-            }}>{tab}</span>
+          <button style={{ flex: 1, padding: '14px', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '12px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}>
+            Perks & Discounts
+          </button>
+          <button style={{ flex: 1, padding: '14px', background: 'white', color: COLORS.textSecondary, border: `2px solid ${COLORS.border}`, borderRadius: '12px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}>
+            Redeem Points
+          </button>
+        </div>
+
+        {/* Category Filters */}
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', overflowX: 'auto', paddingBottom: '4px' }}>
+          {[
+            { label: 'All', active: true },
+            { label: 'Food & Drink', active: false },
+            { label: 'Entertainment', active: false },
+            { label: 'Retail', active: false }
+          ].map((cat, i) => (
+            <span key={i} style={{ padding: '10px 16px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, background: cat.active ? COLORS.primary : '#F1F5F9', color: cat.active ? 'white' : COLORS.textSecondary, whiteSpace: 'nowrap' }}>{cat.label}</span>
           ))}
         </div>
 
         {/* Featured Offers */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-          <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 600, margin: 0 }}>Featured Offers</p>
-          <span style={{ color: COLORS.primary, fontSize: '13px' }}>29+ perks</span>
+        <div style={{ marginBottom: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>Featured Offers</span>
+            <span style={{ color: COLORS.primary, fontSize: '13px', fontWeight: 700 }}>See All</span>
+          </div>
+
+          <div style={{ display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '4px' }}>
+            {[
+              { brand: 'Starbucks', discount: '20% OFF', desc: 'All hot drinks', color: '#00704A', free: true, featured: true, icon: Coffee },
+              { brand: 'Vue Cinema', discount: '2-for-1', desc: 'Standard tickets', color: '#1E3A5F', points: 500, featured: true, icon: Film }
+            ].map((offer, i) => (
+              <div key={i} style={{ minWidth: '160px', background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+                <div style={{ height: '80px', background: `linear-gradient(135deg, ${offer.color} 0%, ${offer.color}DD 100%)`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <offer.icon size={36} color="white" />
+                </div>
+                <div style={{ padding: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                    <span style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 700 }}>{offer.brand}</span>
+                    {offer.featured && (
+                      <span style={{ background: COLORS.warning, padding: '2px 6px', borderRadius: '4px' }}>
+                        <span style={{ color: 'white', fontSize: '9px', fontWeight: 700 }}>HOT</span>
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span style={{ color: offer.color, fontSize: '16px', fontWeight: 800 }}>{offer.discount}</span>
+                  </div>
+                  <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: '4px 0 0' }}>{offer.desc}</p>
+                  <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: `1px solid ${COLORS.border}` }}>
+                    <span style={{ color: offer.free ? COLORS.success : COLORS.primary, fontSize: '12px', fontWeight: 700 }}>
+                      {offer.free ? 'FREE' : `${offer.points} pts`}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px' }}>
+        {/* Perk List */}
+        <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700, display: 'block', marginBottom: '12px' }}>All Perks</span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {[
-            { logo: 'T', name: 'Tesco', discount: '7% OFF', color: '#1D4ED8' },
-            { logo: 'O', name: 'Odeon', discount: '25% OFF', color: '#BE185D' }
-          ].map((offer, i) => (
-            <div key={i} style={{ flex: 1, background: 'white', borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}` }}>
-              <div style={{ position: 'relative', marginBottom: '12px' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: offer.color, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: 'white', fontSize: '20px', fontWeight: 700 }}>{offer.logo}</span>
-                </div>
-                <span style={{ position: 'absolute', top: '-4px', right: '0', background: COLORS.success, color: 'white', fontSize: '10px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px' }}>{offer.discount}</span>
+            { brand: 'Nando\'s', discount: '15% OFF', desc: 'Main meals', color: '#FF3B3B', points: 200, icon: Coffee },
+            { brand: 'Spotify', discount: '50% OFF', desc: 'Premium subscription', color: '#1DB954', points: 800, icon: Music },
+            { brand: 'Pure Gym', discount: '30% OFF', desc: 'Monthly membership', color: '#FF6B35', points: 1000, icon: Dumbbell }
+          ].map((perk, i) => (
+            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '12px', background: perk.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <perk.icon size={26} color="white" />
               </div>
-              <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600, margin: '0 0 12px' }}>{offer.name}</p>
-              <button style={{ width: '100%', background: '#FFF7ED', color: COLORS.primary, border: 'none', borderRadius: '8px', padding: '10px', fontSize: '12px', fontWeight: 600, cursor: 'pointer' }}>Get Perk</button>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <p style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700, margin: 0 }}>{perk.brand}</p>
+                  <span style={{ background: perk.color + '20', color: perk.color, fontSize: '11px', fontWeight: 700, padding: '2px 8px', borderRadius: '6px' }}>{perk.discount}</span>
+                </div>
+                <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: '2px 0 0' }}>{perk.desc}</p>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <span style={{ color: COLORS.primary, fontSize: '14px', fontWeight: 700 }}>{perk.points}</span>
+                <p style={{ color: COLORS.textMuted, fontSize: '10px', margin: '0' }}>pts</p>
+              </div>
+              <ChevronRight size={20} color={COLORS.textMuted} />
             </div>
           ))}
         </div>
       </div>
 
-      <WorkerBottomNav active="Career" />
+      <WorkerBottomNav active="More" />
     </div>
   </MobileFrame>
 );
@@ -645,65 +996,147 @@ export const WorkerRewardsScreen = () => (
 
 /**
  * Manager Dashboard Screen
- * Shows: Team stats, quick actions, team list
+ * Shows: Company branding, quick clock in, metric cards, AI forecast, pending actions, top performers
  */
 export const ManagerDashboardScreen = () => (
   <MobileFrame>
-    <div style={{ height: '100%', background: COLORS.white, padding: '48px 16px 80px' }}>
-      {/* Header */}
-      <div style={{ marginBottom: '20px' }}>
-        <p style={{ color: COLORS.textSecondary, fontSize: '14px', margin: 0 }}>Good morning</p>
-        <p style={{ color: COLORS.textPrimary, fontSize: '22px', fontWeight: 600, margin: '4px 0 0' }}>James Wilson</p>
-      </div>
-
-      {/* Today Overview Card */}
-      <div style={{ background: `linear-gradient(135deg, ${COLORS.info} 0%, #1D4ED8 100%)`, borderRadius: '20px', padding: '20px', marginBottom: '16px' }}>
-        <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px', margin: 0 }}>Today's Team</p>
-        <p style={{ color: 'white', fontSize: '36px', fontWeight: 700, margin: '4px 0 8px' }}>8 / 10</p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <CheckCircle2 size={14} color="white" />
-          <span style={{ color: 'white', fontSize: '13px' }}>2 pending requests</span>
-        </div>
-      </div>
-
-      {/* Quick Actions */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
-        <div style={{ background: COLORS.background, borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}`, textAlign: 'center' }}>
-          <CheckCircle2 size={24} color={COLORS.info} style={{ marginBottom: '8px' }} />
-          <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600, margin: 0 }}>Approvals</p>
-          <p style={{ color: COLORS.info, fontSize: '12px', margin: '4px 0 0' }}>2 pending</p>
-        </div>
-        <div style={{ background: COLORS.background, borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}`, textAlign: 'center' }}>
-          <Calendar size={24} color={COLORS.info} style={{ marginBottom: '8px' }} />
-          <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600, margin: 0 }}>Schedule</p>
-          <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: '4px 0 0' }}>View rota</p>
-        </div>
-      </div>
-
-      {/* Team Today */}
-      <div style={{ background: COLORS.background, borderRadius: '16px', padding: '16px', border: `1px solid ${COLORS.border}` }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-          <span style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600 }}>Team Today</span>
-          <span style={{ color: COLORS.info, fontSize: '13px' }}>View all</span>
-        </div>
-        {[
-          { name: 'Sarah M.', role: 'Sales Associate', status: 'On shift', statusColor: COLORS.success },
-          { name: 'Tom K.', role: 'Cashier', status: 'Starting 10am', statusColor: COLORS.warning },
-          { name: 'Emma L.', role: 'Stock', status: 'On break', statusColor: COLORS.textSecondary }
-        ].map((member, i) => (
-          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: i > 0 ? '10px' : 0, marginTop: i > 0 ? '10px' : 0, borderTop: i > 0 ? `1px solid ${COLORS.border}` : 'none' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <User size={16} color={COLORS.info} />
-              </div>
-              <div>
-                <p style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 500, margin: 0 }}>{member.name}</p>
-                <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: 0 }}>{member.role}</p>
-              </div>
+    <div style={{ height: '100%', background: COLORS.background, overflowY: 'auto' }}>
+      {/* Header with Company Branding */}
+      <div style={{ background: 'white', padding: '44px 16px 16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <div style={{ width: '52px', height: '52px', borderRadius: '12px', background: COLORS.primary, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ color: 'white', fontSize: '24px', fontWeight: 800 }}>G</span>
             </div>
-            <span style={{ color: member.statusColor, fontSize: '12px', fontWeight: 500 }}>{member.status}</span>
+            <div>
+              <p style={{ color: COLORS.textSecondary, fontSize: '12px', margin: 0 }}>Good morning,</p>
+              <p style={{ color: COLORS.textPrimary, fontSize: '20px', fontWeight: 700, margin: '2px 0 0' }}>James</p>
+              <p style={{ color: COLORS.primary, fontSize: '12px', fontWeight: 600, margin: '2px 0 0' }}>Grand Metro Hotels</p>
+            </div>
           </div>
-        ))}
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+              <Bell size={20} color={COLORS.textSecondary} />
+              <div style={{ position: 'absolute', top: '-4px', right: '-4px', minWidth: '20px', height: '20px', background: COLORS.error, borderRadius: '10px', fontSize: '10px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, border: '2px solid white' }}>5</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Clock In */}
+        <button style={{ width: '100%', padding: '14px', background: COLORS.primary, color: 'white', border: 'none', borderRadius: '12px', fontSize: '16px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+          <Clock size={20} /> Clock In
+        </button>
+      </div>
+
+      <div style={{ padding: '16px 16px 80px' }}>
+        {/* Metric Cards Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '16px' }}>
+          {[
+            { value: '12', label: 'On Shift', color: COLORS.success, icon: Users },
+            { value: '3', label: 'On Break', color: COLORS.warning, icon: Clock },
+            { value: '5', label: 'Open', color: COLORS.primary, icon: Briefcase }
+          ].map((metric, i) => (
+            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '14px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: metric.color + '20', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+                <metric.icon size={18} color={metric.color} />
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '24px', fontWeight: 800, margin: 0 }}>{metric.value}</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: '2px 0 0' }}>{metric.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row Metrics */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '20px' }}>
+          {[
+            { value: '8', label: 'Approvals', color: COLORS.error, icon: CheckCircle2 },
+            { value: '94%', label: 'Coverage', color: COLORS.info, icon: Target },
+            { value: '£2.4k', label: 'Labour', color: COLORS.purple, icon: TrendingUp }
+          ].map((metric, i) => (
+            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '14px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: metric.color + '20', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+                <metric.icon size={18} color={metric.color} />
+              </div>
+              <p style={{ color: COLORS.textPrimary, fontSize: '24px', fontWeight: 800, margin: 0 }}>{metric.value}</p>
+              <p style={{ color: COLORS.textSecondary, fontSize: '11px', margin: '2px 0 0' }}>{metric.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* AI Demand Forecast */}
+        <div style={{ background: 'white', borderRadius: '16px', padding: '16px', marginBottom: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+            <Brain size={18} color={COLORS.primary} />
+            <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>AI Demand Forecast</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '6px', height: '60px' }}>
+            {[40, 60, 85, 70, 90, 55, 45].map((height, i) => (
+              <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
+                <div style={{ width: '100%', height: `${height}%`, background: i === 4 ? COLORS.primary : COLORS.info + '40', borderRadius: '4px' }} />
+                <span style={{ color: COLORS.textMuted, fontSize: '9px' }}>{['M', 'T', 'W', 'T', 'F', 'S', 'S'][i]}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '12px', padding: '10px', background: COLORS.primary + '10', borderRadius: '8px' }}>
+            <Zap size={14} color={COLORS.primary} />
+            <span style={{ color: COLORS.textSecondary, fontSize: '12px' }}>Peak demand expected Friday. Consider +2 staff.</span>
+          </div>
+        </div>
+
+        {/* Pending Actions */}
+        <div style={{ marginBottom: '16px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>Pending Actions</span>
+            <span style={{ background: COLORS.error + '20', color: COLORS.error, fontSize: '11px', fontWeight: 600, padding: '4px 8px', borderRadius: '6px' }}>8 items</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {[
+              { title: 'Time Off Requests', count: 3, color: COLORS.warning },
+              { title: 'Shift Swaps', count: 2, color: COLORS.info },
+              { title: 'Availability Changes', count: 3, color: COLORS.primary }
+            ].map((action, i) => (
+              <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '4px', background: action.color }} />
+                  <span style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600 }}>{action.title}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ background: action.color + '20', color: action.color, fontSize: '12px', fontWeight: 700, padding: '4px 10px', borderRadius: '12px' }}>{action.count}</span>
+                  <ChevronRight size={18} color={COLORS.textMuted} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Top Performers */}
+        <div style={{ background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Award size={18} color={COLORS.warning} />
+              <span style={{ color: COLORS.textPrimary, fontSize: '16px', fontWeight: 700 }}>Top Performers</span>
+            </div>
+            <span style={{ color: COLORS.primary, fontSize: '13px', fontWeight: 700 }}>See All</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {[
+              { name: 'Sarah M.', score: 94, rank: 1 },
+              { name: 'Tom K.', score: 89, rank: 2 },
+              { name: 'Emma L.', score: 87, rank: 3 }
+            ].map((performer, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div style={{ width: '28px', height: '28px', borderRadius: '14px', background: i === 0 ? '#FEF3C7' : i === 1 ? '#F1F5F9' : '#FFEDD5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: i === 0 ? COLORS.warning : i === 1 ? COLORS.textSecondary : COLORS.primary, fontSize: '12px', fontWeight: 800 }}>{performer.rank}</span>
+                </div>
+                <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: COLORS.info, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: 'white', fontSize: '12px', fontWeight: 700 }}>{performer.name.split(' ').map(n => n[0]).join('')}</span>
+                </div>
+                <span style={{ color: COLORS.textPrimary, fontSize: '14px', fontWeight: 600, flex: 1 }}>{performer.name}</span>
+                <span style={{ color: COLORS.success, fontSize: '14px', fontWeight: 700 }}>{performer.score}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <ManagerBottomNav active="Dashboard" />
