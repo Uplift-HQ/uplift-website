@@ -1228,8 +1228,8 @@ const ExperiencesSection = () => {
       tabName: 'The Operations Cockpit',
       description: 'Empower managers with the tools they need to run their teams effectively. Approve requests, build schedules, run performance reviews, and track team metrics — all from one dashboard.',
       features: ['Team schedule management', 'Time-off & swap approvals', 'Performance tracking & 1-on-1s', 'Team analytics dashboard', 'Direct messaging', 'Shift coverage alerts'],
-      screenshot: '/screenshots/manager-dashboard.png',
-      isPortal: true,
+      MockupComponent: ManagerDashboardMockup,
+      isPortal: false,
       icon: Users,
       color: '#3B82F6',
     },
@@ -1238,8 +1238,8 @@ const ExperiencesSection = () => {
       tabName: 'My Work Life',
       description: 'Give every employee a powerful portal experience. View schedules, request time off, track their Momentum Score, complete training, give recognition, and grow their career.',
       features: ['Personal dashboard & schedule', 'Time-off requests & swaps', 'Momentum Score tracking', 'Learning & certifications', 'Peer recognition wall', 'Career path visibility'],
-      screenshot: '/screenshots/worker-dashboard.png',
-      isPortal: true,
+      MockupComponent: HeroPhoneMockup,
+      isPortal: false,
       icon: Smartphone,
       color: '#10B981',
     },
@@ -1355,7 +1355,7 @@ const ExperiencesSection = () => {
             </Link>
           </div>
 
-          {/* Screenshot - Portal or Phone based on experience */}
+          {/* Screenshot or Mockup Component based on experience */}
           {active.isPortal ? (
             <div style={{
               background: COLORS.darkSlate,
@@ -1387,13 +1387,17 @@ const ExperiencesSection = () => {
             </div>
           ) : (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <IPhoneFrame scale={1.1}>
-                <img src={active.screenshot} alt={active.title} style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                }} />
-              </IPhoneFrame>
+              {active.MockupComponent ? (
+                <active.MockupComponent />
+              ) : (
+                <IPhoneFrame scale={1.1}>
+                  <img src={active.screenshot} alt={active.title} style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                  }} />
+                </IPhoneFrame>
+              )}
             </div>
           )}
         </div>
