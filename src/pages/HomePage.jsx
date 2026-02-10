@@ -84,7 +84,7 @@ const IPhoneFrame = ({ children, scale = 1, className = "" }) => (
   </div>
 );
 
-// Hero Phone Mockup - Worker App Home Screen (matches real mobile app)
+// Hero Phone Mockup - Worker App Home Screen
 const HeroPhoneMockup = () => (
   <div style={{
     width: '280px',
@@ -97,7 +97,7 @@ const HeroPhoneMockup = () => (
     <div style={{
       width: '100%',
       height: '100%',
-      background: '#f8fafc',
+      background: '#0f172a',
       borderRadius: '34px',
       overflow: 'hidden',
       position: 'relative',
@@ -116,410 +116,125 @@ const HeroPhoneMockup = () => (
       }} />
 
       {/* Screen Content */}
-      <div style={{ height: '100%', boxSizing: 'border-box', overflowY: 'auto' }}>
+      <div style={{ padding: '50px 16px 16px', height: '100%', boxSizing: 'border-box', overflowY: 'auto' }}>
         {/* Header */}
-        <div style={{ background: 'white', padding: '50px 16px 16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: 'white', fontWeight: 800, fontSize: '18px' }}>G</span>
-              </div>
-              <div>
-                <div style={{ fontSize: '12px', color: '#64748b' }}>Good afternoon,</div>
-                <div style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a' }}>Maria</div>
-                <div style={{ fontSize: '11px', color: '#FF6B35', fontWeight: 600 }}>Grand Metro Hotels</div>
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <div style={{ width: '36px', height: '36px', borderRadius: '18px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                <span style={{ fontSize: '14px' }}>💬</span>
-                <div style={{ position: 'absolute', top: '-2px', right: '-2px', width: '16px', height: '16px', background: '#FF6B35', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid white' }}>
-                  <span style={{ fontSize: '8px', color: 'white', fontWeight: 800 }}>3</span>
-                </div>
-              </div>
-              <div style={{ width: '36px', height: '36px', borderRadius: '18px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                <span style={{ fontSize: '14px' }}>🔔</span>
-                <div style={{ position: 'absolute', top: '6px', right: '6px', width: '8px', height: '8px', background: '#ef4444', borderRadius: '4px', border: '2px solid #f1f5f9' }} />
-              </div>
-            </div>
-          </div>
-
-          {/* Momentum Score Card */}
-          <div style={{
-            background: '#0f172a',
-            borderRadius: '16px',
-            padding: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '28px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid rgba(255,107,53,0.3)' }}>
-                <span style={{ fontSize: '22px', fontWeight: 800, color: 'white' }}>87</span>
-              </div>
-              <div>
-                <div style={{ fontSize: '11px', color: 'white', fontWeight: 600 }}>Momentum Score</div>
-                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Level 12 • 2,450 XP</div>
-              </div>
-            </div>
-            <div style={{ flex: 1, marginLeft: '16px' }}>
-              <div style={{ background: '#334155', borderRadius: '3px', height: '6px', marginBottom: '4px' }}>
-                <div style={{ background: '#FF6B35', borderRadius: '3px', height: '6px', width: '82%' }} />
-              </div>
-              <div style={{ fontSize: '9px', color: '#64748b' }}>550 XP to Level 13</div>
-            </div>
-          </div>
+        <div style={{ marginBottom: '20px' }}>
+          <div style={{ fontSize: '13px', color: '#94a3b8' }}>Good afternoon</div>
+          <div style={{ fontSize: '22px', fontWeight: 700, color: 'white' }}>Maria 👋</div>
         </div>
 
-        {/* Live Status Bar */}
-        <div style={{ background: '#1e293b', margin: '0 16px', borderRadius: '10px', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '4px', background: '#22c55e' }} />
-          <span style={{ fontSize: '10px', color: '#22c55e', fontWeight: 800, letterSpacing: '1px' }}>LIVE</span>
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'space-around' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <span style={{ fontSize: '10px' }}>👥</span>
-              <span style={{ fontSize: '12px', color: 'white', fontWeight: 600 }}>12</span>
-              <span style={{ fontSize: '9px', color: '#94a3b8' }}>on shift</span>
-            </div>
-            <div style={{ width: '1px', height: '14px', background: '#475569' }} />
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <span style={{ fontSize: '10px' }}>☕</span>
-              <span style={{ fontSize: '12px', color: 'white', fontWeight: 600 }}>3</span>
-              <span style={{ fontSize: '9px', color: '#94a3b8' }}>break</span>
-            </div>
-            <div style={{ width: '1px', height: '14px', background: '#475569' }} />
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <span style={{ fontSize: '10px' }}>💼</span>
-              <span style={{ fontSize: '12px', color: 'white', fontWeight: 600 }}>5</span>
-              <span style={{ fontSize: '9px', color: '#94a3b8' }}>open</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Certification Alert */}
-        <div style={{ margin: '12px 16px 0', background: 'white', borderRadius: '10px', padding: '12px', borderLeft: '4px solid #f59e0b', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#fef3c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ fontSize: '14px' }}>🛡️</span>
-          </div>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: '12px', fontWeight: 600, color: '#0f172a' }}>Food Safety Certificate</div>
-            <div style={{ fontSize: '10px', color: '#64748b' }}>Expires in 5 days</div>
-          </div>
-          <span style={{ fontSize: '14px', color: '#94a3b8' }}>›</span>
-        </div>
-
-        {/* Today's Shift */}
-        <div style={{ padding: '16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 600, color: '#0f172a' }}>Today's Shift</span>
-            <span style={{ fontSize: '11px', color: '#FF6B35', fontWeight: 600 }}>See all</span>
-          </div>
-          <div style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
-            <div style={{ padding: '14px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <div style={{ width: '6px', height: '6px', borderRadius: '3px', background: '#22c55e' }} />
-                  <span style={{ fontSize: '10px', color: '#64748b', fontWeight: 600 }}>Confirmed</span>
-                </div>
-                <div style={{ background: '#f1f5f9', borderRadius: '12px', padding: '4px 8px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span style={{ fontSize: '10px' }}>🕐</span>
-                  <span style={{ fontSize: '10px', color: '#475569', fontWeight: 600 }}>8h</span>
-                </div>
-              </div>
-              <div style={{ fontSize: '16px', fontWeight: 600, color: '#0f172a', marginBottom: '8px' }}>Senior Server</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <span style={{ fontSize: '12px' }}>🕐</span>
-                  <span style={{ fontSize: '12px', color: '#64748b' }}>9:00am - 5:00pm</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <span style={{ fontSize: '12px' }}>📍</span>
-                  <span style={{ fontSize: '12px', color: '#64748b' }}>Main Restaurant</span>
-                </div>
+        {/* Momentum Score Card */}
+        <div style={{
+          background: 'linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%)',
+          borderRadius: '16px',
+          padding: '20px',
+          marginBottom: '16px',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            {/* Score Ring */}
+            <div style={{ position: 'relative', width: '70px', height: '70px', flexShrink: 0 }}>
+              <svg viewBox="0 0 70 70" style={{ transform: 'rotate(-90deg)' }}>
+                <circle cx="35" cy="35" r="28" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="6" />
+                <circle cx="35" cy="35" r="28" fill="none" stroke="white" strokeWidth="6"
+                  strokeDasharray={`${82 * 1.76} 176`} strokeLinecap="round" />
+              </svg>
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+                <div style={{ fontSize: '20px', fontWeight: 700, color: 'white' }}>82</div>
               </div>
             </div>
-            <div style={{ background: '#FF6B35', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '16px' }}>🕐</span>
-              <span style={{ fontSize: '14px', color: 'white', fontWeight: 600 }}>Clock In</span>
+            <div>
+              <div style={{ fontSize: '14px', fontWeight: 600, color: 'white', marginBottom: '4px' }}>Momentum Score</div>
+              <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.8)' }}>Level 4 • 2,450 XP</div>
+              <div style={{ background: 'rgba(255,255,255,0.3)', borderRadius: '4px', height: '4px', marginTop: '8px', width: '100px' }}>
+                <div style={{ background: 'white', borderRadius: '4px', height: '4px', width: '65%' }} />
+              </div>
             </div>
           </div>
         </div>
 
         {/* Quick Actions */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', padding: '0 16px 12px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px', marginBottom: '16px' }}>
           {[
-            { icon: '📅', label: 'Schedule', bg: '#dbeafe' },
-            { icon: '✅', label: 'Tasks', bg: '#dcfce7' },
-            { icon: '💼', label: 'Open Shifts', bg: '#ffedd5' },
-            { icon: '❤️', label: 'Feed', bg: '#fee2e2' },
+            { icon: '📅', label: 'Schedule' },
+            { icon: '🏖️', label: 'Time Off' },
+            { icon: '📚', label: 'Training' },
+            { icon: '💰', label: 'Payslips' },
           ].map((action, i) => (
             <div key={i} style={{
-              background: 'white',
-              borderRadius: '16px',
-              padding: '14px 8px',
+              background: '#1e293b',
+              borderRadius: '12px',
+              padding: '12px 8px',
               textAlign: 'center',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
             }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: action.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 6px' }}>
-                <span style={{ fontSize: '18px' }}>{action.icon}</span>
-              </div>
-              <div style={{ fontSize: '10px', color: '#475569', fontWeight: 500 }}>{action.label}</div>
+              <div style={{ fontSize: '18px', marginBottom: '4px' }}>{action.icon}</div>
+              <div style={{ fontSize: '9px', color: '#94a3b8' }}>{action.label}</div>
             </div>
           ))}
         </div>
 
-        {/* More Features Row */}
-        <div style={{ padding: '0 16px 16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <span style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a' }}>More</span>
+        {/* Next Shift Card */}
+        <div style={{
+          background: '#1e293b',
+          borderRadius: '12px',
+          padding: '14px',
+          marginBottom: '16px',
+          border: '1px solid #334155',
+        }}>
+          <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '6px' }}>NEXT SHIFT</div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div>
+              <div style={{ fontSize: '14px', fontWeight: 600, color: 'white' }}>Tomorrow</div>
+              <div style={{ fontSize: '12px', color: '#94a3b8' }}>9:00 AM - 5:00 PM</div>
+            </div>
+            <div style={{ background: '#FF6B35', borderRadius: '8px', padding: '6px 10px' }}>
+              <div style={{ fontSize: '10px', color: 'white', fontWeight: 500 }}>Floor</div>
+            </div>
           </div>
-          <div style={{ display: 'flex', gap: '8px', overflowX: 'auto' }}>
-            {[
-              { icon: '💰', label: 'Payslips', color: '#22c55e' },
-              { icon: '📚', label: 'Learning', color: '#3b82f6' },
-              { icon: '📈', label: 'Performance', color: '#f59e0b' },
-              { icon: '🎁', label: 'Rewards', color: '#ec4899' },
-              { icon: '📋', label: 'Surveys', color: '#8b5cf6' },
-              { icon: '📄', label: 'Documents', color: '#64748b' },
-            ].map((item, i) => (
+        </div>
+
+        {/* Achievement Badges */}
+        <div style={{ marginBottom: '16px' }}>
+          <div style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '8px' }}>RECENT ACHIEVEMENTS</div>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            {['⭐', '🏆', '🎯', '💪'].map((badge, i) => (
               <div key={i} style={{
-                background: 'white',
-                borderRadius: '12px',
-                padding: '10px 12px',
+                width: '40px',
+                height: '40px',
+                background: '#1e293b',
+                borderRadius: '10px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.04)',
-                whiteSpace: 'nowrap',
-                border: `1px solid ${item.color}20`,
-              }}>
-                <span style={{ fontSize: '16px' }}>{item.icon}</span>
-                <span style={{ fontSize: '11px', color: '#0f172a', fontWeight: 500 }}>{item.label}</span>
-              </div>
+                justifyContent: 'center',
+                fontSize: '18px',
+                border: '1px solid #334155',
+              }}>{badge}</div>
             ))}
           </div>
         </div>
+
+        {/* Announcement */}
+        <div style={{
+          background: '#1e293b',
+          borderRadius: '12px',
+          padding: '12px',
+          border: '1px solid #334155',
+        }}>
+          <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '4px' }}>📢 ANNOUNCEMENT</div>
+          <div style={{ fontSize: '12px', color: 'white', lineHeight: 1.4 }}>Team meeting tomorrow at 2 PM in the break room.</div>
+        </div>
       </div>
 
-      {/* Bottom Navigation */}
+      {/* Home Indicator */}
       <div style={{
         position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        background: 'white',
-        borderTop: '1px solid #e2e8f0',
-        padding: '8px 0 24px',
-        display: 'flex',
-        justifyContent: 'space-around',
-      }}>
-        {[
-          { icon: '🏠', label: 'Home', active: true },
-          { icon: '📅', label: 'Schedule', active: false },
-          { icon: '✅', label: 'Tasks', active: false },
-          { icon: '🎯', label: 'Career', active: false },
-          { icon: '⋯', label: 'More', active: false },
-        ].map((item, i) => (
-          <div key={i} style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '18px', marginBottom: '2px', opacity: item.active ? 1 : 0.5 }}>{item.icon}</div>
-            <div style={{ fontSize: '9px', color: item.active ? '#FF6B35' : '#94a3b8', fontWeight: item.active ? 600 : 400 }}>{item.label}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
-
-// Manager Dashboard Mockup (matches real mobile app)
-const ManagerDashboardMockup = () => (
-  <div style={{
-    width: '280px',
-    height: '580px',
-    background: '#1a1a1a',
-    borderRadius: '44px',
-    padding: '10px',
-    boxShadow: '0 25px 50px -12px rgba(0,0,0,0.6)',
-  }}>
-    <div style={{
-      width: '100%',
-      height: '100%',
-      background: '#f8fafc',
-      borderRadius: '34px',
-      overflow: 'hidden',
-      position: 'relative',
-    }}>
-      {/* Dynamic Island */}
-      <div style={{
-        position: 'absolute',
-        top: '10px',
+        bottom: '8px',
         left: '50%',
         transform: 'translateX(-50%)',
         width: '100px',
-        height: '28px',
-        background: '#000',
-        borderRadius: '14px',
-        zIndex: 20,
+        height: '4px',
+        background: 'rgba(255,255,255,0.3)',
+        borderRadius: '2px',
       }} />
-
-      {/* Screen Content */}
-      <div style={{ height: '100%', boxSizing: 'border-box', overflowY: 'auto' }}>
-        {/* Header */}
-        <div style={{ background: 'white', padding: '50px 16px 16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: 'white', fontWeight: 800, fontSize: '18px' }}>G</span>
-              </div>
-              <div>
-                <div style={{ fontSize: '11px', color: '#64748b' }}>Team Dashboard</div>
-                <div style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Grand Metro Hotels</div>
-                <div style={{ fontSize: '11px', color: '#FF6B35', fontWeight: 600 }}>Edinburgh City Centre</div>
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <div style={{ width: '36px', height: '36px', borderRadius: '18px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '14px' }}>💬</span>
-              </div>
-              <div style={{ width: '36px', height: '36px', borderRadius: '18px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                <span style={{ fontSize: '14px' }}>🔔</span>
-                <div style={{ position: 'absolute', top: '6px', right: '6px', width: '8px', height: '8px', background: '#ef4444', borderRadius: '4px', border: '2px solid #f1f5f9' }} />
-              </div>
-            </div>
-          </div>
-
-          {/* Clock In Button */}
-          <div style={{ background: 'rgba(255,107,53,0.1)', borderRadius: '12px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', border: '1px solid rgba(255,107,53,0.2)' }}>
-            <span style={{ fontSize: '16px' }}>🕐</span>
-            <span style={{ fontSize: '13px', color: '#FF6B35', fontWeight: 600 }}>Clock in to your shift</span>
-          </div>
-        </div>
-
-        {/* Metrics Grid */}
-        <div style={{ padding: '12px 16px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
-          {[
-            { icon: '👥', value: '8', label: 'Team Size', color: '#FF6B35' },
-            { icon: '📈', value: '76', label: 'Avg Momentum', color: '#22c55e' },
-            { icon: '🎯', value: '94%', label: 'Shifts Filled', color: '#3b82f6' },
-            { icon: '📊', value: '92%', label: 'Retention', color: '#f59e0b' },
-            { icon: '🕐', value: '312', label: 'Hours This Week', color: '#FF6B35' },
-            { icon: '✅', value: '87%', label: 'Task Completion', color: '#22c55e' },
-          ].map((metric, i) => (
-            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '14px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-              <span style={{ fontSize: '20px' }}>{metric.icon}</span>
-              <div style={{ fontSize: '22px', fontWeight: 800, color: '#0f172a', margin: '4px 0' }}>{metric.value}</div>
-              <div style={{ fontSize: '10px', color: '#64748b' }}>{metric.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Demand Forecast */}
-        <div style={{ padding: '0 16px 16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '10px' }}>
-            <span style={{ fontSize: '14px' }}>⚡</span>
-            <span style={{ fontSize: '14px', fontWeight: 600, color: '#0f172a' }}>Demand Forecast</span>
-          </div>
-          <div style={{ background: 'white', borderRadius: '16px', padding: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-            <div style={{ fontSize: '10px', color: '#64748b', marginBottom: '12px' }}>Next 7 days staffing needs</div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', height: '60px', marginBottom: '8px' }}>
-              {[
-                { day: 'Mon', value: 12, peak: false },
-                { day: 'Tue', value: 14, peak: false },
-                { day: 'Wed', value: 11, peak: false },
-                { day: 'Thu', value: 13, peak: false },
-                { day: 'Fri', value: 16, peak: true },
-                { day: 'Sat', value: 18, peak: true },
-                { day: 'Sun', value: 15, peak: false },
-              ].map((item, i) => (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
-                  <span style={{ fontSize: '9px', color: '#64748b', fontWeight: 600 }}>{item.value}</span>
-                  <div style={{ width: '20px', height: `${(item.value / 18) * 50}px`, background: item.peak ? '#f59e0b' : '#FF6B35', borderRadius: '4px' }} />
-                  <span style={{ fontSize: '8px', color: '#94a3b8' }}>{item.day}</span>
-                </div>
-              ))}
-            </div>
-            <div style={{ background: '#fef3c7', borderRadius: '8px', padding: '8px 10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '12px' }}>⚠️</span>
-              <span style={{ fontSize: '10px', color: '#92400e' }}>+2 staff needed for weekend peak</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Pending Actions */}
-        <div style={{ padding: '0 16px 12px' }}>
-          <div style={{ fontSize: '14px', fontWeight: 600, color: '#0f172a', marginBottom: '10px' }}>Pending Actions</div>
-          {[
-            { icon: '⭐', title: 'Skills Verification', subtitle: '5 requests awaiting', badge: '5', color: '#FF6B35' },
-            { icon: '📅', title: 'Schedule Requests', subtitle: 'Swaps & time-off', badge: '5', color: '#3b82f6' },
-            { icon: '👥', title: 'Job Applications', subtitle: '8 new applications', badge: '8', color: '#22c55e' },
-          ].map((action, i) => (
-            <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '12px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '18px' }}>{action.icon}</span>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a' }}>{action.title}</div>
-                <div style={{ fontSize: '11px', color: '#64748b' }}>{action.subtitle}</div>
-              </div>
-              <div style={{ width: '26px', height: '26px', borderRadius: '13px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '12px', color: 'white', fontWeight: 700 }}>{action.badge}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Quick Access - More Manager Features */}
-        <div style={{ padding: '0 16px 16px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a', marginBottom: '8px' }}>Quick Access</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
-            {[
-              { icon: '🧠', label: 'AI Insights', bg: '#ede9fe' },
-              { icon: '💳', label: 'Expenses', bg: '#dcfce7' },
-              { icon: '📈', label: 'Performance', bg: '#fef3c7' },
-              { icon: '📊', label: 'Reports', bg: '#dbeafe' },
-              { icon: '🎓', label: 'Learning', bg: '#fce7f3' },
-              { icon: '🎁', label: 'Rewards', bg: '#ffedd5' },
-              { icon: '💰', label: 'Payroll', bg: '#d1fae5' },
-              { icon: '👋', label: 'Offboarding', bg: '#f1f5f9' },
-            ].map((item, i) => (
-              <div key={i} style={{
-                background: item.bg,
-                borderRadius: '12px',
-                padding: '10px 4px',
-                textAlign: 'center',
-              }}>
-                <span style={{ fontSize: '18px' }}>{item.icon}</span>
-                <div style={{ fontSize: '8px', color: '#475569', fontWeight: 500, marginTop: '4px' }}>{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Navigation */}
-      <div style={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        background: 'white',
-        borderTop: '1px solid #e2e8f0',
-        padding: '8px 0 24px',
-        display: 'flex',
-        justifyContent: 'space-around',
-      }}>
-        {[
-          { icon: '📊', label: 'Dashboard', active: true },
-          { icon: '📅', label: 'Schedule', active: false },
-          { icon: '✅', label: 'Tasks', active: false },
-          { icon: '👥', label: 'Team', active: false },
-          { icon: '⋯', label: 'More', active: false },
-        ].map((item, i) => (
-          <div key={i} style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '18px', marginBottom: '2px', opacity: item.active ? 1 : 0.5 }}>{item.icon}</div>
-            <div style={{ fontSize: '9px', color: item.active ? '#FF6B35' : '#94a3b8', fontWeight: item.active ? 600 : 400 }}>{item.label}</div>
-          </div>
-        ))}
-      </div>
     </div>
   </div>
 );
@@ -829,7 +544,7 @@ const HeroSection = () => {
             }} />
           </div>
 
-          {/* iPhone - Small, bottom-right corner overlay - Worker App Preview */}
+          {/* iPhone - Small, bottom-right corner overlay */}
           <div style={{
             position: 'absolute',
             bottom: '-20px',
@@ -845,11 +560,9 @@ const HeroSection = () => {
             }}>
               <div style={{
                 width: '100%',
-                height: '320px',
                 borderRadius: '22px',
                 overflow: 'hidden',
                 position: 'relative',
-                background: '#f8fafc',
               }}>
                 {/* Dynamic Island */}
                 <div style={{
@@ -863,52 +576,11 @@ const HeroSection = () => {
                   borderRadius: '8px',
                   zIndex: 20,
                 }} />
-                {/* Mini Worker App Content */}
-                <div style={{ padding: '28px 10px 8px', fontSize: '8px' }}>
-                  {/* Header */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-                    <div style={{ width: '24px', height: '24px', borderRadius: '6px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <span style={{ color: 'white', fontWeight: 800, fontSize: '10px' }}>G</span>
-                    </div>
-                    <div>
-                      <div style={{ fontSize: '6px', color: '#64748b' }}>Good afternoon,</div>
-                      <div style={{ fontSize: '10px', fontWeight: 700, color: '#0f172a' }}>Maria</div>
-                    </div>
-                  </div>
-                  {/* Momentum Card */}
-                  <div style={{ background: '#0f172a', borderRadius: '10px', padding: '10px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <div style={{ width: '32px', height: '32px', borderRadius: '16px', background: '#FF6B35', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <span style={{ fontSize: '12px', fontWeight: 800, color: 'white' }}>87</span>
-                    </div>
-                    <div>
-                      <div style={{ fontSize: '7px', color: 'white', fontWeight: 600 }}>Momentum Score</div>
-                      <div style={{ fontSize: '6px', color: '#94a3b8' }}>Level 12 • 2,450 XP</div>
-                    </div>
-                  </div>
-                  {/* Live Bar */}
-                  <div style={{ background: '#1e293b', borderRadius: '6px', padding: '6px 8px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <div style={{ width: '4px', height: '4px', borderRadius: '2px', background: '#22c55e' }} />
-                    <span style={{ fontSize: '6px', color: '#22c55e', fontWeight: 800 }}>LIVE</span>
-                    <span style={{ fontSize: '6px', color: 'white', marginLeft: '4px' }}>12 on shift</span>
-                  </div>
-                  {/* Today Shift */}
-                  <div style={{ background: 'white', borderRadius: '8px', padding: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
-                    <div style={{ fontSize: '6px', color: '#64748b', marginBottom: '4px' }}>TODAY'S SHIFT</div>
-                    <div style={{ fontSize: '9px', fontWeight: 600, color: '#0f172a' }}>Senior Server</div>
-                    <div style={{ fontSize: '7px', color: '#64748b' }}>9am - 5pm • Main Restaurant</div>
-                    <div style={{ background: '#FF6B35', borderRadius: '4px', padding: '4px', marginTop: '6px', textAlign: 'center' }}>
-                      <span style={{ fontSize: '7px', color: 'white', fontWeight: 600 }}>🕐 Clock In</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Bottom Nav */}
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'white', borderTop: '1px solid #e2e8f0', padding: '4px 0 12px', display: 'flex', justifyContent: 'space-around' }}>
-                  {['🏠', '📅', '✅', '🎯', '⋯'].map((icon, i) => (
-                    <div key={i} style={{ textAlign: 'center', opacity: i === 0 ? 1 : 0.4 }}>
-                      <div style={{ fontSize: '10px' }}>{icon}</div>
-                    </div>
-                  ))}
-                </div>
+                <img src="/screenshots/worker-app-home.png" alt="Uplift Worker App" style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }} />
               </div>
             </div>
           </div>
@@ -1020,7 +692,7 @@ const PhoneMockup = ({ children }) => (
   </div>
 );
 
-// Momentum Score Screen (updated to match real app)
+// Momentum Score Screen
 const MomentumScreen = () => (
   <div style={{ textAlign: 'center', color: 'white' }}>
     <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '8px' }}>MOMENTUM SCORE</div>
@@ -1028,107 +700,100 @@ const MomentumScreen = () => (
       <svg viewBox="0 0 100 100" style={{ transform: 'rotate(-90deg)' }}>
         <circle cx="50" cy="50" r="42" fill="none" stroke="#334155" strokeWidth="8" />
         <circle cx="50" cy="50" r="42" fill="none" stroke="#FF6B35" strokeWidth="8"
-          strokeDasharray={`${87 * 2.64} 264`} strokeLinecap="round" />
+          strokeDasharray={`${82 * 2.64} 264`} strokeLinecap="round" />
       </svg>
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-        <div style={{ fontSize: '28px', fontWeight: 700 }}>87</div>
+        <div style={{ fontSize: '28px', fontWeight: 700 }}>82</div>
       </div>
     </div>
-    <div style={{ background: '#FF6B35', borderRadius: '12px', padding: '4px 12px', display: 'inline-block', fontSize: '11px', fontWeight: 600, marginBottom: '8px' }}>Level 12</div>
+    <div style={{ background: '#FF6B35', borderRadius: '12px', padding: '4px 12px', display: 'inline-block', fontSize: '11px', fontWeight: 600, marginBottom: '8px' }}>Level 4</div>
     <div style={{ background: '#334155', borderRadius: '4px', height: '6px', margin: '8px 0' }}>
-      <div style={{ background: '#10B981', borderRadius: '4px', height: '6px', width: '82%' }} />
+      <div style={{ background: '#10B981', borderRadius: '4px', height: '6px', width: '65%' }} />
     </div>
-    <div style={{ fontSize: '9px', color: '#94a3b8' }}>2,450 / 3,000 XP to Level 13</div>
+    <div style={{ fontSize: '9px', color: '#94a3b8' }}>2,450 / 3,000 XP to Level 5</div>
   </div>
 );
 
-// Career Paths Screen (hospitality-focused)
+// Career Paths Screen
 const CareerScreen = () => (
   <div style={{ color: 'white', fontSize: '10px' }}>
     <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '12px', textAlign: 'center' }}>CAREER PATH</div>
     <div style={{ background: '#334155', borderRadius: '8px', padding: '10px', marginBottom: '8px' }}>
       <div style={{ color: '#94a3b8', fontSize: '8px' }}>CURRENT ROLE</div>
-      <div style={{ fontWeight: 600, fontSize: '11px' }}>Senior Server</div>
-      <div style={{ color: '#10B981', fontSize: '9px' }}>£12.50/hr</div>
+      <div style={{ fontWeight: 600, fontSize: '11px' }}>Floor Associate</div>
+      <div style={{ color: '#10B981', fontSize: '9px' }}>£11.50/hr</div>
     </div>
     <div style={{ textAlign: 'center', color: '#FF6B35', margin: '4px 0' }}>↓</div>
     <div style={{ background: '#1e293b', borderRadius: '8px', padding: '10px', border: '1px solid #FF6B35' }}>
-      <div style={{ color: '#FF6B35', fontSize: '8px' }}>NEXT ROLE • 95% match</div>
-      <div style={{ fontWeight: 600, fontSize: '11px' }}>FOH Supervisor</div>
-      <div style={{ color: '#10B981', fontSize: '9px' }}>£28,000 - £32,000/yr</div>
+      <div style={{ color: '#FF6B35', fontSize: '8px' }}>NEXT ROLE</div>
+      <div style={{ fontWeight: 600, fontSize: '11px' }}>Senior Floor Associate</div>
+      <div style={{ color: '#10B981', fontSize: '9px' }}>£13.80/hr (+20%)</div>
     </div>
     <div style={{ marginTop: '10px' }}>
       <div style={{ fontSize: '8px', color: '#94a3b8', marginBottom: '4px' }}>SKILLS NEEDED</div>
       <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ Food Safety L2</span>
-        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ Wine Service</span>
-        <span style={{ background: '#334155', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>Food Safety L3</span>
+        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ POS</span>
+        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ Stock</span>
+        <span style={{ background: '#334155', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>Training</span>
       </div>
     </div>
   </div>
 );
 
-// Schedule Screen (hospitality shifts)
+// Schedule Screen
 const ScheduleScreen = () => (
   <div style={{ color: 'white', fontSize: '10px' }}>
     <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '8px', textAlign: 'center' }}>THIS WEEK</div>
-    {[
-      { day: 'Mon', shift: '9:00 - 17:00', role: 'Main Restaurant', active: false },
-      { day: 'Tue', shift: '14:00 - 22:00', role: 'Bar & Lounge', active: true },
-      { day: 'Wed', shift: '10:00 - 18:00', role: 'Main Restaurant', active: false },
-      { day: 'Thu', shift: '6:00 - 14:00', role: 'Room Service', active: false },
-      { day: 'Fri', shift: 'Day Off', role: null, active: false },
-    ].map((item, i) => (
-      <div key={item.day} style={{
+    {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((day, i) => (
+      <div key={day} style={{
         display: 'flex',
         alignItems: 'center',
         gap: '8px',
         marginBottom: '6px',
         padding: '6px 8px',
-        background: item.active ? '#FF6B3520' : '#334155',
+        background: i === 1 ? '#FF6B3520' : '#334155',
         borderRadius: '6px',
-        border: item.active ? '1px solid #FF6B35' : 'none',
+        border: i === 1 ? '1px solid #FF6B35' : 'none',
       }}>
-        <div style={{ width: '28px', fontSize: '9px', color: '#94a3b8' }}>{item.day}</div>
+        <div style={{ width: '28px', fontSize: '9px', color: '#94a3b8' }}>{day}</div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 500, fontSize: '10px' }}>{item.shift}</div>
-          {item.role && <div style={{ fontSize: '8px', color: '#94a3b8' }}>{item.role}</div>}
+          <div style={{ fontWeight: 500, fontSize: '10px' }}>{i === 4 ? 'Day Off' : '9:00 - 17:00'}</div>
+          {i !== 4 && <div style={{ fontSize: '8px', color: '#94a3b8' }}>{i === 0 ? 'Floor' : i === 1 ? 'Till 3' : i === 2 ? 'Stock Room' : 'Floor'}</div>}
         </div>
       </div>
     ))}
   </div>
 );
 
-// Skills Screen (hospitality certifications)
+// Skills Screen
 const SkillsScreen = () => (
   <div style={{ color: 'white', fontSize: '10px' }}>
-    <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '10px', textAlign: 'center' }}>MY SKILLS & CERTS</div>
+    <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '10px', textAlign: 'center' }}>MY SKILLS</div>
     {[
-      { name: 'Food Safety Level 2', verified: true, level: 100, mandatory: true },
-      { name: 'Allergen Awareness', verified: true, level: 100, expiring: true },
-      { name: 'Wine Service WSET L2', verified: true, level: 100 },
-      { name: 'Food Safety Level 3', verified: false, level: 75, inProgress: true },
+      { name: 'Customer Service', verified: true, level: 85 },
+      { name: 'POS Systems', verified: true, level: 100 },
+      { name: 'Stock Management', verified: false, level: 60 },
+      { name: 'Team Leadership', verified: false, level: 30 },
     ].map((skill) => (
       <div key={skill.name} style={{ marginBottom: '10px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
           <span style={{ fontSize: '10px' }}>{skill.name}</span>
-          {skill.verified && <span style={{ background: skill.expiring ? '#f59e0b' : '#10B981', borderRadius: '4px', padding: '1px 4px', fontSize: '7px' }}>{skill.expiring ? '⚠️' : '✓'}</span>}
-          {skill.inProgress && <span style={{ background: '#3b82f6', borderRadius: '4px', padding: '1px 4px', fontSize: '7px' }}>75%</span>}
+          {skill.verified && <span style={{ background: '#10B981', borderRadius: '4px', padding: '1px 4px', fontSize: '7px' }}>✓</span>}
         </div>
         <div style={{ background: '#334155', borderRadius: '3px', height: '5px' }}>
-          <div style={{ background: skill.verified ? '#10B981' : '#3b82f6', borderRadius: '3px', height: '5px', width: `${skill.level}%` }} />
+          <div style={{ background: skill.verified ? '#10B981' : '#FF6B35', borderRadius: '3px', height: '5px', width: `${skill.level}%` }} />
         </div>
       </div>
     ))}
   </div>
 );
 
-// Recognition Screen (with rewards catalog hint)
+// Recognition Screen
 const RecognitionScreen = () => (
   <div style={{ color: 'white', fontSize: '10px' }}>
-    <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '8px', textAlign: 'center' }}>RECOGNITION & REWARDS</div>
+    <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '8px', textAlign: 'center' }}>RECOGNITION</div>
     <div style={{ background: '#FF6B3520', borderRadius: '8px', padding: '10px', textAlign: 'center', marginBottom: '10px' }}>
-      <div style={{ fontSize: '20px', fontWeight: 700, color: '#FF6B35' }}>2,450</div>
+      <div style={{ fontSize: '20px', fontWeight: 700, color: '#FF6B35' }}>1,250</div>
       <div style={{ fontSize: '9px', color: '#94a3b8' }}>Points Balance</div>
     </div>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', marginBottom: '10px' }}>
@@ -1136,24 +801,20 @@ const RecognitionScreen = () => (
         <div key={i} style={{ background: '#334155', borderRadius: '6px', padding: '8px', textAlign: 'center', fontSize: '14px' }}>{badge}</div>
       ))}
     </div>
-    <div style={{ background: '#334155', borderRadius: '6px', padding: '8px', marginBottom: '8px' }}>
+    <div style={{ background: '#334155', borderRadius: '6px', padding: '8px' }}>
       <div style={{ fontSize: '9px', color: '#10B981', marginBottom: '2px' }}>Latest Kudos</div>
-      <div style={{ fontSize: '9px' }}>"Great service tonight!" - Sophie B.</div>
-    </div>
-    <div style={{ background: '#1e293b', borderRadius: '6px', padding: '8px', border: '1px dashed #475569' }}>
-      <div style={{ fontSize: '8px', color: '#FF6B35', marginBottom: '2px' }}>🎁 REDEEM REWARDS</div>
-      <div style={{ fontSize: '8px', color: '#94a3b8' }}>Costa, Odeon, Amazon & more</div>
+      <div style={{ fontSize: '9px' }}>"Great teamwork today!" - Sarah M.</div>
     </div>
   </div>
 );
 
 const WorkersFirstSection = () => {
   const features = [
-    { title: 'Momentum Score', subtitle: 'See your progress, not just your schedule.', Screen: MomentumScreen },
-    { title: 'Career Paths', subtitle: 'Know where you\'re going.', Screen: CareerScreen },
-    { title: 'Smart Scheduling', subtitle: 'Your time, your visibility.', Screen: ScheduleScreen },
-    { title: 'Skills & Learning', subtitle: 'Grow while you work.', Screen: SkillsScreen },
-    { title: 'Recognition & Rewards', subtitle: 'Get seen for what you do.', Screen: RecognitionScreen },
+    { title: 'Momentum Score', subtitle: 'See your progress, not just your schedule.', screenshot: '/screenshots/worker-app-home.png' },
+    { title: 'Career Paths', subtitle: 'Know where you\'re going.', screenshot: '/screenshots/worker-app-career.png' },
+    { title: 'Smart Scheduling', subtitle: 'Your time, your visibility.', screenshot: '/screenshots/worker-app-schedule.png' },
+    { title: 'Skills & Learning', subtitle: 'Grow while you work.', screenshot: '/screenshots/worker_skills.jpeg' },
+    { title: 'Recognition & Rewards', subtitle: 'Get seen for what you do.', screenshot: '/screenshots/worker-app-rewards.png' },
   ];
 
   return (
@@ -1287,8 +948,8 @@ const ExperiencesSection = () => {
       tabName: 'The Operations Cockpit',
       description: 'Empower managers with the tools they need to run their teams effectively. Approve requests, build schedules, run performance reviews, and track team metrics — all from one dashboard.',
       features: ['Team schedule management', 'Time-off & swap approvals', 'Performance tracking & 1-on-1s', 'Team analytics dashboard', 'Direct messaging', 'Shift coverage alerts'],
-      MockupComponent: ManagerDashboardMockup,
-      isPortal: false,
+      screenshot: '/screenshots/manager-dashboard.png',
+      isPortal: true,
       icon: Users,
       color: '#3B82F6',
     },
@@ -1297,8 +958,8 @@ const ExperiencesSection = () => {
       tabName: 'My Work Life',
       description: 'Give every employee a powerful portal experience. View schedules, request time off, track their Momentum Score, complete training, give recognition, and grow their career.',
       features: ['Personal dashboard & schedule', 'Time-off requests & swaps', 'Momentum Score tracking', 'Learning & certifications', 'Peer recognition wall', 'Career path visibility'],
-      MockupComponent: HeroPhoneMockup,
-      isPortal: false,
+      screenshot: '/screenshots/worker-dashboard.png',
+      isPortal: true,
       icon: Smartphone,
       color: '#10B981',
     },
@@ -1414,7 +1075,7 @@ const ExperiencesSection = () => {
             </Link>
           </div>
 
-          {/* Screenshot or Mockup Component based on experience */}
+          {/* Screenshot - Portal or Phone based on experience */}
           {active.isPortal ? (
             <div style={{
               background: COLORS.darkSlate,
@@ -1446,17 +1107,13 @@ const ExperiencesSection = () => {
             </div>
           ) : (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              {active.MockupComponent ? (
-                React.createElement(active.MockupComponent)
-              ) : (
-                <IPhoneFrame scale={1.1}>
-                  <img src={active.screenshot} alt={active.title} style={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                  }} />
-                </IPhoneFrame>
-              )}
+              <IPhoneFrame scale={1.1}>
+                <img src={active.screenshot} alt={active.title} style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }} />
+              </IPhoneFrame>
             </div>
           )}
         </div>
