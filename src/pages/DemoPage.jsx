@@ -578,12 +578,12 @@ export default function DemoPage() {
               marginBottom: '48px'
             }}>
               <PhoneFrame
-                src="/demo/index.html?demo=worker"
+                src="/mobile-demo/worker/?demo=worker"
                 label="Employee Mobile App"
                 sublabel="Sarah Mitchell"
               />
               <PhoneFrame
-                src="/demo/index.html?demo=manager"
+                src="/mobile-demo/manager/?demo=manager"
                 label="Manager Mobile App"
                 sublabel="James Wilson"
               />
