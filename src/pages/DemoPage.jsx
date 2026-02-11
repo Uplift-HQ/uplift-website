@@ -462,7 +462,7 @@ export default function DemoPage() {
                   marginBottom: '12px',
                   fontWeight: 500
                 }}>
-                  James Williams
+                  James Wilson
                 </p>
 
                 <p style={{
@@ -533,7 +533,7 @@ export default function DemoPage() {
                   marginBottom: '12px',
                   fontWeight: 500
                 }}>
-                  Maria Santos
+                  Sarah Mitchell
                 </p>
 
                 <p style={{
@@ -578,14 +578,14 @@ export default function DemoPage() {
               marginBottom: '48px'
             }}>
               <PhoneFrame
-                src="/demo/worker/index.html?demo=true"
+                src="/demo/index.html?demo=worker"
                 label="Employee Mobile App"
-                sublabel="Maria Santos"
+                sublabel="Sarah Mitchell"
               />
               <PhoneFrame
-                src="/demo/manager/index.html?demo=true"
+                src="/demo/index.html?demo=manager"
                 label="Manager Mobile App"
-                sublabel="James Williams"
+                sublabel="James Wilson"
               />
             </div>
 
