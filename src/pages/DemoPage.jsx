@@ -12,13 +12,13 @@ const HUBSPOT_CONFIG = {
   formGuid: 'ffc77268-2efe-4af4-84b9-03f61b8f5672'
 };
 
-// Demo URLs
-const PORTAL_BASE = 'https://upliftportaldemo.netlify.app';
+// Demo URLs - auto-login for instant access
+const PORTAL_BASE = 'https://demo.uplifthq.co.uk';
 const DEMO_CONFIG = {
   portalUrl: `${PORTAL_BASE}/`,
-  portalAdminUrl: `${PORTAL_BASE}/login?demo=admin`,
-  portalManagerUrl: `${PORTAL_BASE}/login?demo=manager`,
-  portalWorkerUrl: `${PORTAL_BASE}/login?demo=worker`,
+  portalAdminUrl: `${PORTAL_BASE}/auto-login?role=admin`,
+  portalManagerUrl: `${PORTAL_BASE}/auto-login?role=manager`,
+  portalWorkerUrl: `${PORTAL_BASE}/auto-login?role=worker`,
   calendlyUrl: 'https://calendly.com/dazevedo-uplifthq/30min'
 };
 
