@@ -4,7 +4,7 @@ import {
   ArrowRight, Check, ChevronDown, Users, Calendar, TrendingUp,
   BarChart3, Smartphone, Star, Menu, X, Target, Award, Clock,
   Building2, GraduationCap, Globe, Sparkles, DollarSign, Heart,
-  CheckCircle2, Play, Wallet, FileText,
+  CheckCircle2, Play, Wallet, FileText, Bell, Shield, Lock,
   UserCheck, ClipboardList, PieChart, Layers, Phone,
   ShoppingBag, Hotel, HeartPulse, Factory, Zap
 } from 'lucide-react';
@@ -120,7 +120,7 @@ const HeroPhoneMockup = () => (
         {/* Header */}
         <div style={{ marginBottom: '20px' }}>
           <div style={{ fontSize: '13px', color: '#94a3b8' }}>Good afternoon</div>
-          <div style={{ fontSize: '22px', fontWeight: 700, color: 'white' }}>Maria 👋</div>
+          <div style={{ fontSize: '22px', fontWeight: 700, color: 'white' }}>Maria</div>
         </div>
 
         {/* Momentum Score Card */}
@@ -155,10 +155,10 @@ const HeroPhoneMockup = () => (
         {/* Quick Actions */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px', marginBottom: '16px' }}>
           {[
-            { icon: '📅', label: 'Schedule' },
-            { icon: '🏖️', label: 'Time Off' },
-            { icon: '📚', label: 'Training' },
-            { icon: '💰', label: 'Payslips' },
+            { label: 'Schedule', Icon: Calendar },
+            { label: 'Time Off', Icon: Clock },
+            { label: 'Training', Icon: GraduationCap },
+            { label: 'Payslips', Icon: Wallet },
           ].map((action, i) => (
             <div key={i} style={{
               background: '#1e293b',
@@ -166,7 +166,7 @@ const HeroPhoneMockup = () => (
               padding: '12px 8px',
               textAlign: 'center',
             }}>
-              <div style={{ fontSize: '18px', marginBottom: '4px' }}>{action.icon}</div>
+              <div style={{ marginBottom: '4px', display: 'flex', justifyContent: 'center' }}><action.Icon size={18} color="#94a3b8" /></div>
               <div style={{ fontSize: '9px', color: '#94a3b8' }}>{action.label}</div>
             </div>
           ))}
@@ -196,7 +196,7 @@ const HeroPhoneMockup = () => (
         <div style={{ marginBottom: '16px' }}>
           <div style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '8px' }}>RECENT ACHIEVEMENTS</div>
           <div style={{ display: 'flex', gap: '8px' }}>
-            {['⭐', '🏆', '🎯', '💪'].map((badge, i) => (
+            {[Star, Award, Target, Heart].map((BadgeIcon, i) => (
               <div key={i} style={{
                 width: '40px',
                 height: '40px',
@@ -205,9 +205,8 @@ const HeroPhoneMockup = () => (
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '18px',
                 border: '1px solid #334155',
-              }}>{badge}</div>
+              }}><BadgeIcon size={18} color="#FF6B35" /></div>
             ))}
           </div>
         </div>
@@ -219,7 +218,7 @@ const HeroPhoneMockup = () => (
           padding: '12px',
           border: '1px solid #334155',
         }}>
-          <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '4px' }}>📢 ANNOUNCEMENT</div>
+          <div style={{ fontSize: '10px', color: '#94a3b8', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '4px' }}><Bell size={10} /> ANNOUNCEMENT</div>
           <div style={{ fontSize: '12px', color: 'white', lineHeight: 1.4 }}>Team meeting tomorrow at 2 PM in the break room.</div>
         </div>
       </div>
@@ -240,6 +239,19 @@ const HeroPhoneMockup = () => (
 );
 
 // ============================================================================
+// NOVA ICON COMPONENT
+// ============================================================================
+const NovaIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" rx="14" fill="#FF6B35"/>
+    <circle cx="32" cy="38" r="14" fill="white" opacity="0.95"/>
+    <path d="M26 30 L32 8 L38 30 Z" fill="white" opacity="0.95"/>
+    <circle cx="32" cy="38" r="18" fill="none" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+    <circle cx="32" cy="38" r="22" fill="none" stroke="white" strokeWidth="1" opacity="0.15"/>
+  </svg>
+);
+
+// ============================================================================
 // NAVIGATION
 // ============================================================================
 const Navigation = () => {
@@ -253,6 +265,7 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
+    { label: 'Nova', href: '/nova', highlight: true },
     { label: 'Platform', href: '#platform' },
     { label: 'Industries', href: '#industries' },
     { label: 'Pricing', href: '#pricing' },
@@ -286,11 +299,17 @@ const Navigation = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
           {navLinks.map((link) => (
             <a key={link.label} href={link.href} style={{
-              color: COLORS.slate200,
+              color: link.highlight ? COLORS.momentum : COLORS.slate200,
               textDecoration: 'none',
               fontSize: '15px',
-              fontWeight: 500,
-            }}>{link.label}</a>
+              fontWeight: link.highlight ? 600 : 500,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+            }}>
+              {link.highlight && <NovaIcon size={24} />}
+              {link.label}
+            </a>
           ))}
         </div>
 
@@ -345,14 +364,19 @@ const Navigation = () => {
         }}>
           {navLinks.map((link) => (
             <a key={link.label} href={link.href} style={{
-              display: 'block',
-              color: COLORS.slate200,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: link.highlight ? COLORS.momentum : COLORS.slate200,
               textDecoration: 'none',
               fontSize: '16px',
-              fontWeight: 500,
+              fontWeight: link.highlight ? 600 : 500,
               padding: '12px 0',
               borderBottom: `1px solid ${COLORS.slate700}`,
-            }}>{link.label}</a>
+            }}>
+              {link.highlight && <NovaIcon size={24} />}
+              {link.label}
+            </a>
           ))}
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{
             display: 'block',
@@ -430,7 +454,7 @@ const HeroSection = () => {
           }}>
             <Sparkles size={16} color={COLORS.momentum} />
             <span style={{ color: COLORS.momentum, fontSize: '14px', fontWeight: 500 }}>
-              Founding Partner Program — 33% Off Forever
+              AI-Powered Workforce Management
             </span>
           </div>
 
@@ -651,6 +675,164 @@ const ProblemSection = () => {
 };
 
 // ============================================================================
+// NOVA AI ASSISTANT SECTION
+// ============================================================================
+const NovaSection = () => {
+  const capabilities = [
+    {
+      title: 'Takes Action',
+      description: 'Not a FAQ bot. Nova actually does things — request time off, check payslips, build schedules.',
+      Icon: Zap,
+    },
+    {
+      title: 'Knows Your Data',
+      description: 'Integrated with your real company data. Respects role-based permissions.',
+      Icon: Lock,
+    },
+    {
+      title: 'Works Everywhere',
+      description: 'Portal, Mobile App, Slack, Teams, WhatsApp. 48 languages.',
+      Icon: Globe,
+    },
+  ];
+
+  return (
+    <section style={{
+      background: COLORS.darkSlate,
+      padding: '120px 24px',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Background accent */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '800px',
+        height: '800px',
+        background: `radial-gradient(circle, ${COLORS.momentum}10 0%, transparent 70%)`,
+        borderRadius: '50%',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: '24px',
+          }}>
+            <NovaIcon size={64} />
+          </div>
+
+          <h2 style={{
+            fontSize: '44px',
+            fontWeight: 700,
+            color: COLORS.white,
+            marginBottom: '16px',
+            letterSpacing: '-0.02em',
+          }}>
+            Meet Nova.
+          </h2>
+
+          <p style={{
+            fontSize: '22px',
+            color: COLORS.momentum,
+            fontWeight: 600,
+            marginBottom: '16px',
+          }}>
+            The workforce assistant that actually does things.
+          </p>
+
+          <p style={{
+            fontSize: '18px',
+            color: COLORS.slate400,
+            maxWidth: '700px',
+            margin: '0 auto 48px',
+            lineHeight: 1.7,
+          }}>
+            Nova is an AI assistant built into every part of Uplift. Workers, managers, and HR can ask questions
+            and take action through natural language — across portal, mobile, Slack, Teams, and WhatsApp.
+          </p>
+
+          {/* Capability cards */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '24px',
+            marginBottom: '48px',
+          }} className="nova-grid">
+            {capabilities.map((cap, i) => (
+              <div key={i} style={{
+                background: COLORS.slate800,
+                border: `1px solid ${COLORS.slate700}`,
+                borderRadius: '16px',
+                padding: '32px 24px',
+                textAlign: 'center',
+              }}>
+                <div style={{
+                  width: '56px',
+                  height: '56px',
+                  borderRadius: '14px',
+                  background: `${COLORS.momentum}15`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 16px',
+                }}>
+                  <cap.Icon size={28} color={COLORS.momentum} />
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: 600,
+                  color: COLORS.white,
+                  marginBottom: '8px',
+                }}>
+                  {cap.title}
+                </h3>
+                <p style={{
+                  fontSize: '14px',
+                  color: COLORS.slate400,
+                  lineHeight: 1.6,
+                }}>
+                  {cap.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <Link to="/nova" style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '16px 28px',
+            background: COLORS.momentum,
+            color: COLORS.white,
+            borderRadius: '12px',
+            textDecoration: 'none',
+            fontSize: '16px',
+            fontWeight: 600,
+            boxShadow: `0 4px 20px ${COLORS.momentum}40`,
+          }}>
+            Learn more about Nova
+            <ArrowRight size={18} />
+          </Link>
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .nova-grid { grid-template-columns: 1fr !important; max-width: 400px !important; margin: 0 auto 48px !important; }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+// ============================================================================
 // BUILT FOR WORKERS FIRST SECTION - NEW
 // ============================================================================
 // SVG Phone Mockup Component
@@ -732,8 +914,8 @@ const CareerScreen = () => (
     <div style={{ marginTop: '10px' }}>
       <div style={{ fontSize: '8px', color: '#94a3b8', marginBottom: '4px' }}>SKILLS NEEDED</div>
       <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ POS</span>
-        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>✓ Stock</span>
+        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px', display: 'flex', alignItems: 'center', gap: '2px' }}><Check size={8} /> POS</span>
+        <span style={{ background: '#10B981', borderRadius: '4px', padding: '2px 6px', fontSize: '8px', display: 'flex', alignItems: 'center', gap: '2px' }}><Check size={8} /> Stock</span>
         <span style={{ background: '#334155', borderRadius: '4px', padding: '2px 6px', fontSize: '8px' }}>Training</span>
       </div>
     </div>
@@ -778,7 +960,7 @@ const SkillsScreen = () => (
       <div key={skill.name} style={{ marginBottom: '10px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
           <span style={{ fontSize: '10px' }}>{skill.name}</span>
-          {skill.verified && <span style={{ background: '#10B981', borderRadius: '4px', padding: '1px 4px', fontSize: '7px' }}>✓</span>}
+          {skill.verified && <span style={{ background: '#10B981', borderRadius: '4px', padding: '1px 4px', fontSize: '7px', display: 'flex', alignItems: 'center' }}><Check size={8} /></span>}
         </div>
         <div style={{ background: '#334155', borderRadius: '3px', height: '5px' }}>
           <div style={{ background: skill.verified ? '#10B981' : '#FF6B35', borderRadius: '3px', height: '5px', width: `${skill.level}%` }} />
@@ -797,8 +979,8 @@ const RecognitionScreen = () => (
       <div style={{ fontSize: '9px', color: '#94a3b8' }}>Points Balance</div>
     </div>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', marginBottom: '10px' }}>
-      {['⭐', '🏆', '💪', '🎯', '🌟', '👏'].map((badge, i) => (
-        <div key={i} style={{ background: '#334155', borderRadius: '6px', padding: '8px', textAlign: 'center', fontSize: '14px' }}>{badge}</div>
+      {[Star, Award, Heart, Target, Sparkles, Users].map((BadgeIcon, i) => (
+        <div key={i} style={{ background: '#334155', borderRadius: '6px', padding: '8px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><BadgeIcon size={14} color="#FF6B35" /></div>
       ))}
     </div>
     <div style={{ background: '#334155', borderRadius: '6px', padding: '8px' }}>
@@ -1481,39 +1663,37 @@ const IndustriesSection = () => {
 };
 
 // ============================================================================
-// PRICING SECTION - CORRECTED
+// PRICING SECTION
 // ============================================================================
 const PricingSection = () => {
   const includedFeatures = [
-    'Full platform access (all modules)',
+    'All 16 modules included',
+    'Nova AI assistant',
     'Mobile apps (Worker + Manager)',
     'AI scheduling & demand forecasting',
     'Multi-country payroll',
-    'Career pathing & Momentum Score',
     'Analytics, reporting & integrations',
   ];
 
   const plans = [
     {
       name: 'Growth',
-      employees: 'Up to 250 employees',
-      price: '10',
-      originalPrice: '15',
+      employees: '0–500 users',
+      price: '15',
       popular: false,
       enterprise: false,
     },
     {
       name: 'Scale',
-      employees: '250–750 employees',
-      price: '8',
-      originalPrice: '12',
+      employees: '500–1,000 users',
+      price: '12',
       popular: true,
       enterprise: false,
     },
     {
       name: 'Enterprise',
-      employees: '750+ employees',
-      price: 'Custom',
+      employees: '1,000+ users',
+      price: 'POA',
       popular: false,
       enterprise: true,
     },
@@ -1526,21 +1706,6 @@ const PricingSection = () => {
     }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: `${COLORS.momentum}20`,
-            borderRadius: '100px',
-            padding: '8px 16px',
-            marginBottom: '24px',
-          }}>
-            <Star size={16} color={COLORS.momentum} fill={COLORS.momentum} />
-            <span style={{ color: COLORS.momentum, fontSize: '14px', fontWeight: 500 }}>
-              Founding Partner Pricing — Save 33% Forever
-            </span>
-          </div>
-
           <h2 style={{
             fontSize: '42px',
             fontWeight: 700,
@@ -1603,34 +1768,12 @@ const PricingSection = () => {
               <p style={{ fontSize: '14px', color: COLORS.slate400, marginBottom: '20px' }}>{plan.employees}</p>
 
               {/* Price */}
-              <div style={{ marginBottom: '16px' }}>
-                {plan.originalPrice && (
-                  <span style={{
-                    fontSize: '20px',
-                    color: COLORS.slate600,
-                    textDecoration: 'line-through',
-                    marginRight: '10px',
-                  }}>£{plan.originalPrice}</span>
-                )}
+              <div style={{ marginBottom: '24px' }}>
                 <span style={{ fontSize: '48px', fontWeight: 700, color: COLORS.white }}>
-                  {plan.price === 'Custom' ? 'Custom' : `£${plan.price}`}
+                  {plan.price === 'POA' ? 'POA' : `£${plan.price}`}
                 </span>
-                {plan.price !== 'Custom' && <span style={{ color: COLORS.slate400, fontSize: '14px' }}>/user/month</span>}
+                {plan.price !== 'POA' && <span style={{ color: COLORS.slate400, fontSize: '14px' }}>/user/month</span>}
               </div>
-
-              {/* Save badge */}
-              {plan.originalPrice && (
-                <div style={{
-                  background: `${COLORS.momentum}20`,
-                  borderRadius: '8px',
-                  padding: '8px 12px',
-                  marginBottom: '24px',
-                  display: 'inline-block',
-                }}>
-                  <span style={{ color: COLORS.momentum, fontSize: '13px', fontWeight: 600 }}>Save 33% forever</span>
-                </div>
-              )}
-              {plan.enterprise && <div style={{ height: '44px' }} />}
 
               {/* Divider */}
               <div style={{ height: '1px', background: COLORS.slate700, marginBottom: '24px' }} />
@@ -1669,26 +1812,6 @@ const PricingSection = () => {
           ))}
         </div>
 
-        {/* Flex Pricing Callout */}
-        <div style={{
-          marginTop: '32px',
-          marginBottom: '32px',
-          padding: '20px 24px',
-          background: `${COLORS.slate700}40`,
-          borderRadius: '12px',
-          border: `1px solid ${COLORS.slate700}`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '12px',
-          flexWrap: 'wrap',
-        }}>
-          <Users size={18} color={COLORS.slate400} />
-          <p style={{ color: COLORS.slate200, fontSize: '15px', margin: 0, textAlign: 'center' }}>
-            <span style={{ fontWeight: 600 }}>Seasonal staff?</span> Base + Flex pricing available. Add temporary users at +£2/user premium during peak periods. No commitment. Billed monthly.
-          </p>
-        </div>
-
         {/* Summary box */}
         <div style={{
           background: COLORS.darkSlate,
@@ -1702,7 +1825,7 @@ const PricingSection = () => {
             color: COLORS.slate400,
             margin: 0,
           }}>
-            <span style={{ color: COLORS.white, fontWeight: 600 }}>Every plan includes everything.</span> All 15+ modules, mobile apps, 48 languages, offline mode, and all integrations. No feature gating. No per-module charges.
+            <span style={{ color: COLORS.white, fontWeight: 600 }}>Every plan includes everything.</span> All 16 modules, Nova AI, mobile apps, 48 languages, offline mode, and all integrations. No feature gating. No per-module charges.
           </p>
         </div>
       </div>
@@ -1836,12 +1959,32 @@ const CTASection = () => {
 // FOOTER
 // ============================================================================
 const Footer = () => {
-  const links = {
-    Product: ['Features', 'Pricing', 'Demo', 'Integrations', 'Mobile Apps'],
-    Company: ['About', 'Careers', 'Blog', 'Press'],
-    Resources: ['Help Center', 'Documentation', 'API Reference', 'Status'],
-    Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'GDPR'],
-  };
+  // Only include links that actually work
+  const footerSections = [
+    {
+      title: 'Product',
+      links: [
+        { label: 'Platform', href: '#platform' },
+        { label: 'Nova AI', href: '/nova' },
+        { label: 'Pricing', href: '#pricing' },
+        { label: 'Demo', href: '/demo' },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: `mailto:hello@uplifthq.co.uk` },
+      ],
+    },
+    {
+      title: 'Legal',
+      links: [
+        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'Terms of Service', href: '/terms' },
+      ],
+    },
+  ];
 
   return (
     <footer style={{
@@ -1852,7 +1995,7 @@ const Footer = () => {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr',
+          gridTemplateColumns: '2fr 1fr 1fr 1fr',
           gap: '48px',
           marginBottom: '64px',
         }} className="footer-grid">
@@ -1868,10 +2011,26 @@ const Footer = () => {
               The complete workforce management platform for frontline teams.
               Built for workers first.
             </p>
+            <a
+              href="https://linkedin.com/company/uplifthq"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                color: COLORS.slate400,
+                textDecoration: 'none',
+                fontSize: '13px',
+                marginTop: '16px',
+              }}
+            >
+              LinkedIn
+            </a>
           </div>
 
-          {Object.entries(links).map(([category, items]) => (
-            <div key={category}>
+          {footerSections.map((section) => (
+            <div key={section.title}>
               <h4 style={{
                 color: COLORS.white,
                 fontSize: '14px',
@@ -1879,14 +2038,20 @@ const Footer = () => {
                 marginBottom: '16px',
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em',
-              }}>{category}</h4>
+              }}>{section.title}</h4>
               <div style={{ display: 'grid', gap: '12px' }}>
-                {items.map((item) => (
-                  <a key={item} href={item === 'Privacy Policy' ? '/privacy' : item === 'Terms of Service' ? '/terms' : '#'} style={{
-                    color: COLORS.slate400,
-                    textDecoration: 'none',
-                    fontSize: '14px',
-                  }}>{item}</a>
+                {section.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    style={{
+                      color: COLORS.slate400,
+                      textDecoration: 'none',
+                      fontSize: '14px',
+                    }}
+                  >
+                    {link.label}
+                  </a>
                 ))}
               </div>
             </div>
@@ -1930,6 +2095,7 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <ProblemSection />
+      <NovaSection />
       <WorkersFirstSection />
       <ExperiencesSection />
       <ModulesSection />

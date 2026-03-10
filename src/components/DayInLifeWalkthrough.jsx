@@ -793,7 +793,7 @@ const PortalDashboardScreen = () => (
               fontWeight: 600,
               color: i === 5 ? '#92400E' : '#166534'
             }}>
-              {i === 5 ? '!' : '✓'}
+              {i === 5 ? '!' : <Check size={14} />}
             </div>
           </div>
         ))}

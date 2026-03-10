@@ -38,11 +38,12 @@ const RisingULogo = ({ size = 40, color = "light" }) => {
 };
 
 // Phone Frame component
-// Render iframe at real iPhone dimensions (375x812) then scale down to fit frame
-const IPHONE_W = 375;
-const IPHONE_H = 812;
+// Render iframe at iPhone Pro Max dimensions (430x932) then scale down to fit frame
+// Larger internal resolution prevents text wrapping issues
+const IPHONE_W = 430;
+const IPHONE_H = 932;
 const FRAME_W = 300;
-const SCALE = FRAME_W / IPHONE_W; // ~0.8
+const SCALE = FRAME_W / IPHONE_W; // ~0.7
 const FRAME_H = Math.round(IPHONE_H * SCALE);
 
 const PhoneFrame = ({ src, label, sublabel }) => (
@@ -578,18 +579,18 @@ export default function DemoPage() {
               marginBottom: '48px'
             }}>
               <PhoneFrame
-                src="/mobile-demo/worker/?demo=worker"
+                src="/mobile-demo/index.html?demo=worker"
                 label="Employee Mobile App"
                 sublabel="Sarah Mitchell"
               />
               <PhoneFrame
-                src="/mobile-demo/manager/?demo=manager"
+                src="/mobile-demo/index.html?demo=manager"
                 label="Manager Mobile App"
                 sublabel="James Wilson"
               />
             </div>
 
-            {/* PoV CTA */}
+            {/* CTA */}
             <div style={{
               textAlign: 'center',
               padding: '40px',
@@ -611,7 +612,7 @@ export default function DemoPage() {
                 color: 'rgba(255,255,255,0.6)',
                 marginBottom: '24px'
               }}>
-                Book a Proof of Value session and we'll configure Uplift for your workforce
+                Book a call and we'll show you how Uplift can transform your workforce
               </p>
 
               <a
@@ -633,7 +634,7 @@ export default function DemoPage() {
                   cursor: 'pointer'
                 }}
               >
-                <Calendar size={20} /> Request 14-Day Proof of Value
+                <Calendar size={20} /> Book a Call
               </a>
             </div>
           </div>
