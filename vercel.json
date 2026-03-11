@@ -2,6 +2,12 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/:path((?!mobile-demo|assets|_expo).*)", "destination": "/index.html" }
+    { "source": "/nova", "destination": "/index.html" },
+    { "source": "/demo", "destination": "/index.html" },
+    { "source": "/pricing", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/platform", "destination": "/index.html" },
+    { "source": "/industries", "destination": "/index.html" },
+    { "source": "/industries/:path*", "destination": "/index.html" }
   ]
 }
