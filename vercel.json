@@ -1,5 +1,8 @@
 {
+  "cleanUrls": false,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/((?!mobile-demo|assets|favicon|robots|sitemap|og-image|screenshots).*)", "destination": "/index.html" }
+    { "source": "/mobile-demo/:path*", "destination": "/mobile-demo/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
