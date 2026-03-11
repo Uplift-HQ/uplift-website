@@ -1,8 +1,10 @@
 {
-  "cleanUrls": false,
-  "trailingSlash": false,
   "rewrites": [
-    { "source": "/mobile-demo/:path*", "destination": "/mobile-demo/:path*" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/nova", "destination": "/index.html" },
+    { "source": "/demo", "destination": "/index.html" },
+    { "source": "/pricing", "destination": "/index.html" },
+    { "source": "/industries/:path*", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/platform", "destination": "/index.html" }
   ]
 }
