@@ -12,8 +12,8 @@ const HUBSPOT_CONFIG = {
   formGuid: 'ffc77268-2efe-4af4-84b9-03f61b8f5672'
 };
 
-// Demo URLs - auto-login for instant access
-const PORTAL_BASE = 'https://uplift-portal-production.up.railway.app';
+// Demo URLs - auto-login for instant access (General hospitality demo - Grand Metropolitan Hotel)
+const PORTAL_BASE = 'https://upliftportaldemo.netlify.app';
 const DEMO_CONFIG = {
   portalUrl: `${PORTAL_BASE}/`,
   portalAdminUrl: `${PORTAL_BASE}/auto-login?role=admin`,
