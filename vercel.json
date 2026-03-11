@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/mobile-demo/worker/:path*", "destination": "/mobile-demo/worker/index.html" },
-    { "source": "/mobile-demo/manager/:path*", "destination": "/mobile-demo/manager/index.html" },
-    { "source": "/((?!mobile-demo/).*)", "destination": "/" }
+    { "source": "/((?!mobile-demo|assets|favicon|robots|sitemap|og-image|screenshots).*)", "destination": "/index.html" }
   ]
 }
