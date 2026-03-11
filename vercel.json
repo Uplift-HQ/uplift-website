@@ -1,5 +1,13 @@
 {
+  "headers": [
+    {
+      "source": "/mobile-demo/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0" }]
+    }
+  ],
   "rewrites": [
-    { "source": "/((?!mobile-demo|assets|_next).*)", "destination": "/index.html" }
+    { "source": "/mobile-demo/index.html", "destination": "/mobile-demo/index.html" },
+    { "source": "/mobile-demo/", "destination": "/mobile-demo/index.html" },
+    { "source": "/:path((?!mobile-demo|assets|_expo).*)", "destination": "/index.html" }
   ]
 }
