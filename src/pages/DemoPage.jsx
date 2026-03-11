@@ -13,7 +13,7 @@ const HUBSPOT_CONFIG = {
 };
 
 // Demo URLs - auto-login for instant access
-const PORTAL_BASE = 'https://upliftportaldemo.netlify.app';
+const PORTAL_BASE = 'https://uplift-portal-production.up.railway.app';
 const DEMO_CONFIG = {
   portalUrl: `${PORTAL_BASE}/`,
   portalAdminUrl: `${PORTAL_BASE}/auto-login?role=admin`,
