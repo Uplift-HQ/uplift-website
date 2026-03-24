@@ -392,7 +392,7 @@ export default function Act4Intelligence() {
             color: COLORS.orange,
             fontFamily: TYPOGRAPHY.font,
           }}>
-            Patentable · Proprietary
+            Patent Pending · Proprietary
           </span>
         </div>
       </div>

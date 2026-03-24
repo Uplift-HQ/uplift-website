@@ -91,7 +91,7 @@ export default function IntelligenceSection() {
                 fontSize: '0.78rem',
                 color: COLORS.textMuted,
               }}>
-                Patentable · Proprietary · Included at every tier
+                Patent Pending · Proprietary · Included at every tier
               </span>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function IntelligenceSection() {
                 fontSize: '0.78rem',
                 color: COLORS.textMuted,
               }}>
-                Patentable · Proprietary · Included at every tier
+                Patent Pending · Proprietary · Included at every tier
               </span>
             </div>
           </div>
