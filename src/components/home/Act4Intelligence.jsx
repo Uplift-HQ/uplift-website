@@ -418,35 +418,33 @@ export default function Act4Intelligence() {
             overflow: hidden !important;
           }
           .orbital-wrapper {
+            position: relative !important;
             width: 100% !important;
-            overflow: hidden !important;
+            height: 300px !important;
             margin-bottom: 20px !important;
           }
           .orbital-container.reveal.animate-in {
-            transform: scale(0.62) translateY(0) !important;
-            transform-origin: center center !important;
-            margin: -95px auto -95px auto !important;
-          }
-        }
-        @media (max-width: 640px) {
-          section#intelligence { padding: 80px 16px !important; }
-          .orbital-container.reveal.animate-in {
-            transform: scale(0.52) translateY(0) !important;
-            margin: -120px auto -120px auto !important;
+            position: absolute !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) scale(0.55) !important;
+            margin: 0 !important;
           }
         }
         @media (max-width: 480px) {
+          .orbital-wrapper {
+            height: 260px !important;
+          }
           .orbital-container.reveal.animate-in {
-            transform: scale(0.44) translateY(0) !important;
-            margin: -140px auto -140px auto !important;
+            transform: translate(-50%, -50%) scale(0.48) !important;
           }
         }
-        @media (max-width: 420px) {
-          section#intelligence { padding: 60px 8px !important; }
-          .orbital-wrapper { margin: 0 auto 10px !important; }
+        @media (max-width: 400px) {
+          .orbital-wrapper {
+            height: 220px !important;
+          }
           .orbital-container.reveal.animate-in {
-            transform: scale(0.36) translateX(-60px) translateY(0) !important;
-            margin: -160px auto -160px auto !important;
+            transform: translate(-50%, -50%) scale(0.40) !important;
           }
         }
       `}</style>
