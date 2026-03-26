@@ -104,16 +104,22 @@ export default function Act4Intelligence() {
           </div>
         </div>
 
-        {/* Orbital Diagram */}
-        <div className="reveal orbital-container" style={{
-          position: 'relative',
-          width: '500px',
-          height: '500px',
+        {/* Orbital Diagram Wrapper */}
+        <div className="orbital-wrapper" style={{
+          width: '100%',
+          maxWidth: '500px',
           margin: '0 auto 72px',
-          opacity: 0,
-          transform: 'translateY(20px)',
-          transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          overflow: 'hidden',
         }}>
+          <div className="reveal orbital-container" style={{
+            position: 'relative',
+            width: '500px',
+            height: '500px',
+            margin: '0 auto',
+            opacity: 0,
+            transform: 'translateY(20px)',
+            transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          }}>
           {/* Rings - 150/270/400/490px diameter */}
           {[490, 400, 270, 150].map((size, i) => (
             <div
@@ -189,6 +195,7 @@ export default function Act4Intelligence() {
               </div>
             );
           })}
+          </div>
         </div>
 
         {/* Three-cell grid */}
@@ -406,13 +413,41 @@ export default function Act4Intelligence() {
           .intel-header { grid-template-columns: 1fr !important; gap: 24px !important; }
           .intel-grid { grid-template-columns: 1fr !important; }
         }
+        @media (max-width: 768px) {
+          section#intelligence {
+            overflow: hidden !important;
+          }
+          .orbital-wrapper {
+            width: 100% !important;
+            overflow: hidden !important;
+            margin-bottom: 20px !important;
+          }
+          .orbital-container.reveal.animate-in {
+            transform: scale(0.62) translateY(0) !important;
+            transform-origin: center center !important;
+            margin: -95px auto -95px auto !important;
+          }
+        }
         @media (max-width: 640px) {
-          .orbital-container { transform: scale(0.65) !important; margin: -60px auto 0 !important; }
-          section { padding: 80px 24px !important; }
+          section#intelligence { padding: 80px 16px !important; }
+          .orbital-container.reveal.animate-in {
+            transform: scale(0.52) translateY(0) !important;
+            margin: -120px auto -120px auto !important;
+          }
         }
         @media (max-width: 480px) {
-          .orbital-container { transform: scale(0.55) !important; margin: -80px auto -20px !important; }
-          .orbit-node:nth-child(even) { opacity: 0 !important; }
+          .orbital-container.reveal.animate-in {
+            transform: scale(0.44) translateY(0) !important;
+            margin: -140px auto -140px auto !important;
+          }
+        }
+        @media (max-width: 420px) {
+          section#intelligence { padding: 60px 8px !important; }
+          .orbital-wrapper { margin: 0 auto 10px !important; }
+          .orbital-container.reveal.animate-in {
+            transform: scale(0.36) translateX(-60px) translateY(0) !important;
+            margin: -160px auto -160px auto !important;
+          }
         }
       `}</style>
     </section>
