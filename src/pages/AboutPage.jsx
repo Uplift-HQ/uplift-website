@@ -100,7 +100,7 @@ export default function AboutPage() {
           </p>
 
           <p style={{ marginBottom: '32px' }}>
-            One app. Schedules, skills, and a career path they can actually see. For the first time, frontline workers get the same visibility as everyone else in the building.
+            One app. Schedules, skills, and a career path they can actually see. For the first time, deskless workers get the same visibility as everyone else in the building.
           </p>
 
           <p style={{ marginBottom: '32px', fontWeight: 500, color: '#0F172A' }}>

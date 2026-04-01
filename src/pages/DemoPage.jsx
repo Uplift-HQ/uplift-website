@@ -400,7 +400,7 @@ export default function DemoPage() {
               lineHeight: 1.7,
               marginBottom: '24px',
             }}>
-              The app your frontline team actually wants to use. Clock in, check schedules, request time off, and grow their career.
+              The app your deskless team actually wants to use. Clock in, check schedules, request time off, and grow their career.
             </p>
 
             {/* App Store — Live */}

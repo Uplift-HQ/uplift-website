@@ -346,7 +346,7 @@ const ChannelsSection = () => {
     },
     {
       name: 'WhatsApp',
-      description: 'For frontline teams who live on mobile.',
+      description: 'For deskless teams who live on mobile.',
       icon: MessageCircle,
     },
   ];

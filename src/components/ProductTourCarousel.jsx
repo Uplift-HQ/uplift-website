@@ -356,7 +356,7 @@ export default function ProductTourCarousel() {
           margin: 0,
           lineHeight: 1.6
         }}>
-          From head office analytics to frontline workers' pockets — everyone gets the tools they need.
+          From head office analytics to deskless workers' pockets — everyone gets the tools they need.
         </p>
       </div>
 

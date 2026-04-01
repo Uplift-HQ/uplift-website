@@ -31,7 +31,7 @@ const mobileTabs = [
   },
   {
     id: 'worker',
-    label: 'Frontline worker',
+    label: 'Deskless worker',
     headline: 'Work life in your pocket.',
     screenshot: '/screenshots/worker_home.jpeg',
   },

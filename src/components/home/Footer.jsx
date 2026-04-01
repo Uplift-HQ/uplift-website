@@ -53,7 +53,7 @@ export default function Footer() {
               marginTop: '16px',
               maxWidth: '280px',
             }}>
-              The complete workforce management platform for frontline teams.
+              The complete workforce management platform for deskless teams.
               Built for workers first.
             </p>
             <a

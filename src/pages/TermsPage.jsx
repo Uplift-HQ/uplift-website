@@ -138,7 +138,7 @@ export default function TermsPage() {
 
           <Section id="description" title="2. Description of Service">
             <p>
-              Uplift provides a workforce management platform designed for frontline teams. The Service includes features for:
+              Uplift provides a workforce management platform designed for deskless teams. The Service includes features for:
             </p>
             <BulletList items={[
               'Work scheduling and shift management',
