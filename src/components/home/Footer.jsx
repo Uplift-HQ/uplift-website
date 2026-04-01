@@ -57,7 +57,7 @@ export default function Footer() {
               Built for workers first.
             </p>
             <a
-              href="https://linkedin.com/company/uplifthq"
+              href="https://www.linkedin.com/company/uplift-work/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -123,7 +123,7 @@ export default function Footer() {
             color: '#94A3B8',
             fontSize: '14px',
           }}>
-            © {new Date().getFullYear()} Uplift Technologies Ltd. All rights reserved.
+            © {new Date().getFullYear()} Uplift App Ltd. All rights reserved.
           </p>
           <p style={{
             fontFamily: TYPOGRAPHY.font,

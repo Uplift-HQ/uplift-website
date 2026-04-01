@@ -832,7 +832,7 @@ const Footer = () => (
       <Link to="/terms" style={{ color: '#94A3B8', textDecoration: 'none', fontSize: '14px', fontFamily: TYPOGRAPHY.font }}>Terms</Link>
     </div>
     <p style={{ color: COLORS.slate500, fontSize: '14px', fontFamily: TYPOGRAPHY.font }}>
-      &copy; {new Date().getFullYear()} Uplift Technologies Ltd. All rights reserved.
+      &copy; {new Date().getFullYear()} Uplift App Ltd. All rights reserved.
     </p>
   </footer>
 );
